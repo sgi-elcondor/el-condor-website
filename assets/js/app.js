@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Page title + canonical
             document.title = proyecto.nombre + " | Lotes en " + proyecto.ciudad + " | El Cóndor";
             const canonical = document.getElementById("page-canonical");
-            if (canonical) canonical.href = "https://elcondor.com.co/proyecto.html?id=" + slug;
+            if (canonical) canonical.href = "https://somoselcondor.com/proyecto?id=" + slug;
 
             // Meta description dinámica
             let metaDesc = document.querySelector('meta[name="description"]');
@@ -74,8 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 "@type": "LandForm",
                 "name": proyecto.nombre,
                 "description": proyecto.descripcion || "",
-                "url": "https://elcondor.com.co/proyecto.html?id=" + slug,
-                "image": proyecto.logo ? "https://elcondor.com.co/" + proyecto.logo : "",
+                "url": "https://somoselcondor.com/proyecto?id=" + slug,
+                "image": proyecto.logo ? "https://somoselcondor.com/" + proyecto.logo : "",
                 "address": {
                     "@type": "PostalAddress",
                     "addressLocality": proyecto.ciudad,
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     "priceCurrency": "COP",
                     "description": "Facilidades de pago hasta 36 meses sin intereses"
                 } : undefined,
-                "provider": { "@id": "https://elcondor.com.co/#organization" }
+                "provider": { "@id": "https://somoselcondor.com/#organization" }
             };
             const schemaEl = document.createElement("script");
             schemaEl.type = "application/ld+json";
