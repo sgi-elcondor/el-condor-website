@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /assets/data/
+Disallow: /output/
+Disallow: /partials/
+
+Sitemap: https://elcondor.com.co/sitemap.xml
