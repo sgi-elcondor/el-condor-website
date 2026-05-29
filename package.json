@@ -1,0 +1,9 @@
+{
+  "name": "el-condor-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web estático de El Cóndor S.A.S",
+  "scripts": {
+    "dev": "npx --yes netlify-cli dev"
+  }
+}
