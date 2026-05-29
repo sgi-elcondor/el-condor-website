@@ -18,7 +18,8 @@ Website/
 ├── simulador.html          Simulador de cuotas / plan de pagos
 ├── contacto.html           Datos de contacto + WhatsApp
 ├── robots.txt              SEO: reglas para crawlers
-├── sitemap.xml             SEO: mapa del sitio
+├── sitemap.xml             SEO: mapa del sitio (URLs limpias)
+├── netlify.toml            Config de Netlify: publish dir + redirects .html → limpias
 ├── README.md               Resumen e instrucciones de arranque
 ├── DOCUMENTACION.md         Este archivo
 ├── CLAUDE.md               Reglas de trabajo para el asistente (Claude)
@@ -152,15 +153,46 @@ pero **actualmente no está enlazado** desde ninguna página del sitio.
 
 ## 4. Desarrollo local
 
+Como las páginas usan **URLs limpias** (Netlify sirve `empresa.html` en `/empresa`),
+para que los enlaces internos (`/empresa`, `/proyecto?id=...`) funcionen igual que
+en producción usa **Netlify CLI**:
+
 ```bash
-python -m http.server 8000      # o:  npx serve .
+npm i -g netlify-cli   # una sola vez
+netlify dev            # replica URLs limpias + redirects de netlify.toml
 ```
-Abrir <http://localhost:8000>. Es obligatorio servir por HTTP porque los
-`fetch()` de partials y JSON fallan con `file://`.
+
+Un servidor estático normal (`python -m http.server` / `npx serve`) **no** resuelve
+`/empresa` (daría 404); solo sirve si abres `empresa.html` directamente. En todo
+caso debe ser por HTTP, nunca `file://` (los `fetch()` de partials/JSON fallan).
 
 ---
 
-## 5. Convenciones
+## 5. Despliegue y ramas (Netlify)
+
+- **Netlify despliega la rama `main`** (producción → el dominio público).
+- Se trabaja en **`develop`** (rama por defecto de `git push`). `main` no recibe
+  cambios hasta que tú lo decidas.
+- Para publicar: fusionar `develop` → `main` y empujar `main`.
+
+```bash
+# trabajar (estando en develop)
+git add -A && git commit -m "..." && git push      # sube a develop
+
+# desplegar a producción
+git checkout main && git merge develop && git push  # Netlify despliega
+git checkout develop                                 # volver a trabajar
+```
+
+### URLs limpias
+- Los enlaces internos apuntan a rutas sin extensión (`/`, `/empresa`, `/proyecto?id=x`).
+- `netlify.toml` redirige (301) las rutas antiguas `*.html` a las limpias.
+- **Las rutas de assets siguen siendo relativas** (`assets/...`) y no se tocan:
+  funcionan porque cada página cuelga de la raíz `/`.
+
+---
+
+## 6. Convenciones
 
 - **Rutas relativas** siempre (`assets/...`, `partials/...`) — el sitio puede vivir en un subdirectorio.
 - **Nombres de archivo** en minúsculas y sin espacios ni tildes (kebab-case en los PDF).
