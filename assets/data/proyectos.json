@@ -1,0 +1,126 @@
+[
+  {
+    "id": 1,
+    "slug": "esmeralda",
+    "nombre": "La Esmeralda",
+    "ciudad": "Flandes",
+    "departamento": "Tolima",
+    "tipo": "urbanizacion",
+    "logo": "assets/images/logolaesmeralda.jpg",
+    "descripcion": "Urbanización abierta con lotes de 72 m² en Flandes, Tolima, cerca al Río Magdalena. Alta valorización, servicios básicos y facilidad de pago directa sin intereses.",
+    "ubicacion": "Flandes, Tolima",
+    "ubicacionTexto": "Estratégicamente ubicado en Flandes, Tolima, con fácil acceso vial desde Bogotá y Girardot. Zona de alto crecimiento inmobiliario.",
+    "mapa": "https://www.google.com/maps?q=Flandes+Tolima&output=embed",
+    "lat": 4.2912,
+    "lng": -74.8165,
+    "precioDesde": 38000000,
+    "precioTexto": "$38.000.000",
+    "area": "72 m²",
+    "caracteristicas": ["Urbanización abierta", "Servicios básicos", "Sin intereses", "Financiación hasta 36 meses"],
+    "imagenes": [
+      "assets/images/dron1.jpeg",
+      "assets/images/dron2.jpeg",
+      "assets/images/flandes1.png",
+      "assets/images/flandes2.png",
+      "assets/images/flandes3.png",
+      "assets/images/flandes4.png"
+    ],
+    "pdfPrecios": "assets/pdf/tabla-valores-urbanizacion-la-esmeralda.pdf"
+  },
+
+  {
+    "id": 2,
+    "slug": "esmeralda-luxury",
+    "nombre": "La Esmeralda Luxury",
+    "ciudad": "Flandes",
+    "departamento": "Tolima",
+    "tipo": "conjunto",
+    "logo": "assets/images/logoesmeraldaluxury.jpeg",
+    "descripcion": "Conjunto privado cerrado con lotes desde 102 m² en Flandes, Tolima. Exclusividad, seguridad y valorización garantizada en una de las zonas de mayor desarrollo del país.",
+    "ubicacion": "Flandes, Tolima",
+    "ubicacionTexto": "Ubicado en Flandes, Tolima, en zona residencial con acceso controlado, vías internas pavimentadas y todos los servicios.",
+    "mapa": "https://www.google.com/maps?q=Flandes+Tolima&output=embed",
+    "lat": 4.2920,
+    "lng": -74.8170,
+    "precioDesde": null,
+    "precioTexto": "Consultar",
+    "area": "Desde 102 m²",
+    "caracteristicas": ["Conjunto privado", "Portería 24h", "Vías internas", "Financiación directa"],
+    "imagenes": [
+      "assets/images/logoesmeraldaluxury.jpeg"
+    ],
+    "pdfPrecios": null
+  },
+
+  {
+    "id": 3,
+    "slug": "topacio",
+    "nombre": "Topacio",
+    "ciudad": "Flandes",
+    "departamento": "Tolima",
+    "tipo": "urbanizacion",
+    "logo": "assets/images/logotopacio.jpg",
+    "descripcion": "Urbanización en Flandes, Tolima. Lotes de 72 m² desde $32.000.000 con financiación directa, sin bancos y sin intereses. El punto de entrada ideal para tu primera inversión.",
+    "ubicacion": "Flandes, Tolima",
+    "ubicacionTexto": "En el municipio de Flandes, Tolima, con excelente conectividad y proyección de valorización a corto y mediano plazo.",
+    "mapa": "https://www.google.com/maps?q=Flandes+Tolima&output=embed",
+    "lat": 4.2900,
+    "lng": -74.8155,
+    "precioDesde": 32000000,
+    "precioTexto": "$32.000.000",
+    "area": "72 m²",
+    "caracteristicas": ["Urbanización abierta", "Precio accesible", "Sin intereses", "Financiación hasta 36 meses"],
+    "imagenes": [
+      "assets/images/logotopacio.jpg"
+    ],
+    "pdfPrecios": "assets/pdf/tabla-valores-urbanizacion-topacio.pdf"
+  },
+
+  {
+    "id": 4,
+    "slug": "topacio-luxury",
+    "nombre": "Topacio Luxury",
+    "ciudad": "Flandes",
+    "departamento": "Tolima",
+    "tipo": "condominio",
+    "logo": "assets/images/logotopacioluxury.jpeg",
+    "descripcion": "Condominio cerrado de alto estándar en Flandes, Tolima. Lotes desde 98 m² con portería, zonas comunes y toda la documentación legal al día.",
+    "ubicacion": "Flandes, Tolima",
+    "ubicacionTexto": "Condominio residencial en zona exclusiva de Flandes, Tolima, con alta proyección de valorización y seguridad permanente.",
+    "mapa": "https://www.google.com/maps?q=Flandes+Tolima&output=embed",
+    "lat": 4.2930,
+    "lng": -74.8180,
+    "precioDesde": null,
+    "precioTexto": "Consultar",
+    "area": "Desde 98 m²",
+    "caracteristicas": ["Condominio cerrado", "Zonas comunes", "Portería 24h", "Financiación directa"],
+    "imagenes": [
+      "assets/images/logotopacioluxury.jpeg"
+    ],
+    "pdfPrecios": "assets/pdf/tabla-valores-condominio-topacio-luxury.pdf"
+  },
+
+  {
+    "id": 5,
+    "slug": "puerta-de-oro",
+    "nombre": "Puerta de Oro",
+    "ciudad": "Flandes",
+    "departamento": "Tolima",
+    "tipo": "condominio",
+    "logo": "assets/images/logopuertadeoro.jpeg",
+    "descripcion": "Condominio campestre con grandes lotes desde 500 m² en Flandes, Tolima. Servicios de agua, energía y alcantarillado. Entorno natural privilegiado a minutos del Río Magdalena.",
+    "ubicacion": "Flandes, Tolima",
+    "ubicacionTexto": "Ubicado en las afueras de Flandes, Tolima, en un entorno campestre con naturaleza, tranquilidad y alta valorización a largo plazo.",
+    "mapa": "https://www.google.com/maps?q=Flandes+Tolima&output=embed",
+    "lat": 4.2880,
+    "lng": -74.8200,
+    "precioDesde": null,
+    "precioTexto": "Consultar",
+    "area": "Desde 500 m²",
+    "caracteristicas": ["Condominio campestre", "Agua y energía", "Alcantarillado", "Lotes grandes"],
+    "imagenes": [
+      "assets/images/logopuertadeoro.jpeg"
+    ],
+    "pdfPrecios": null
+  }
+]

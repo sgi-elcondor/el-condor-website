@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Proyecto | El Cóndor S.A.S</title>
+    <meta name="description" content="Conoce los detalles, precios y características de este proyecto de El Cóndor. Lotes con respaldo legal, facilidades de pago y alta valorización.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="El Cóndor S.A.S">
+    <meta name="theme-color" content="#1B2342">
+    <link rel="canonical" id="page-canonical" href="https://elcondor.com.co/proyectos.html">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i%7CRajdhani:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/loader/loaders.css">
+    <link rel="stylesheet" href="assets/css/font-awesome/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/aos/aos.css">
+    <link rel="stylesheet" href="assets/css/swiper/swiper.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+    <div class="css-loader">
+        <img src="assets/images/logo.png" class="loader-logo" alt="El Cóndor">
+        <div class="loader-dots"><span></span><span></span><span></span></div>
+    </div>
+
+    <div id="header"></div>
+
+    <!-- HERO -->
+    <section class="hero hero-inner">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7" data-aos="fade-right">
+                    <span class="proy-tipo-badge" id="proyecto-tipo-badge"></span>
+                    <h1 id="proyecto-nombre">Proyecto</h1>
+                    <p id="proyecto-descripcion" class="proy-hero-desc">Descripción del proyecto</p>
+                    <div class="proy-hero-loc">
+                        <i class="fa fa-map-marker"></i>
+                        <span id="proyecto-hero-ciudad">Municipio, Departamento</span>
+                    </div>
+                    <div class="mt-3">
+                        <a href="#precios" class="btn btn-primary mr-2">Ver precios</a>
+                        <a href="simulador.html" class="btn btn-outline-primary">Simular pago</a>
+                    </div>
+                </div>
+                <div class="col-md-5 d-none d-md-flex justify-content-center align-items-center" data-aos="fade-left">
+                    <img id="proyecto-logo-hero" src="" alt="" class="proy-hero-logo">
+                </div>
+            </div>
+        </div>
+        <div class="texture"></div>
+        <div class="diag-bg"></div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="proy-stats-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <div class="proy-stat">
+                        <i class="fa fa-map-marker"></i>
+                        <div class="proy-stat-val" id="pstat-ubicacion">—</div>
+                        <div class="proy-stat-label">Ubicación</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="proy-stat proy-stat-sep">
+                        <i class="fa fa-expand"></i>
+                        <div class="proy-stat-val" id="pstat-area">—</div>
+                        <div class="proy-stat-label">Área desde</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="proy-stat proy-stat-sep">
+                        <i class="fa fa-tag"></i>
+                        <div class="proy-stat-val" id="pstat-precio">—</div>
+                        <div class="proy-stat-label">Precio desde</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="proy-stat proy-stat-sep">
+                        <i class="fa fa-check-circle"></i>
+                        <div class="proy-stat-val">Sin intereses</div>
+                        <div class="proy-stat-label">Financiación directa</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAPA -->
+    <section class="proy-mapa-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-right">
+                    <div class="title">
+                        <h6 class="title-primary">Ubicación</h6>
+                        <h2 class="title-blue" id="proyecto-ubicacion">Municipio, Departamento</h2>
+                    </div>
+                    <p id="proyecto-ubicacion-texto" class="proy-ubicacion-desc"></p>
+                    <a href="contacto.html" class="btn btn-outline-primary btn-sm">
+                        <i class="fa fa-phone mr-1"></i> Hablar con un asesor
+                    </a>
+                </div>
+                <div class="col-md-8" data-aos="fade-left">
+                    <div class="proy-mapa-wrapper">
+                        <iframe id="mapa-proyecto" src="" width="100%" height="380"
+                            style="border:0;" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STREET VIEW (solo si el proyecto tiene streetView en el JSON) -->
+    <section class="proy-sv-section" id="street-view-section" style="display:none;" data-aos="fade-up">
+        <div class="container">
+            <div class="title text-center mb-4">
+                <h6 class="title-primary">Entorno real</h6>
+                <h2 class="title-blue">Vista del sector</h2>
+            </div>
+            <div class="proy-sv-wrapper">
+                <iframe id="street-view-iframe" src="" width="100%" height="420"
+                    style="border:0;" allowfullscreen loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARACTERÍSTICAS -->
+    <section class="proy-caract-section" data-aos="fade-up">
+        <div class="container">
+            <div class="title text-center mb-5">
+                <h6 class="title-primary">Por qué elegir este proyecto</h6>
+                <h2 class="title-blue">Características destacadas</h2>
+            </div>
+            <div class="row justify-content-center" id="caracteristicas-grid"></div>
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="featured" id="galeria">
+        <div class="container">
+            <div class="title text-center mb-5">
+                <h6 class="title-primary">Galería</h6>
+                <h2 class="title-blue">Imágenes del proyecto</h2>
+            </div>
+            <div class="swiper-container proyecto-galeria">
+                <div class="swiper-wrapper" id="galeria-proyecto"></div>
+                <div class="galeria-overlay">
+                    <button class="galeria-btn galeria-prev-btn">
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+                    <button class="galeria-btn galeria-next-btn">
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+                    <button class="galeria-btn galeria-fullscreen-btn">
+                        <i class="fa fa-expand"></i>
+                    </button>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRECIOS -->
+    <section class="services bg-light" id="precios">
+        <div class="container">
+            <div class="title text-center mb-4">
+                <h6 class="title-primary">Disponibilidad</h6>
+                <h2 class="title-blue">Tabla de precios</h2>
+            </div>
+            <div id="precios-wrapper">
+                <iframe id="pdf-precios" src="" width="100%" height="750"
+                    style="border:0; display:none;"></iframe>
+                <div id="precios-consultar" class="text-center py-5" style="display:none;">
+                    <p class="lead">Tabla de precios próximamente disponible.</p>
+                    <a href="contacto.html" class="btn btn-primary">Consultar con un asesor</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="assets/js/jquery-3.3.1.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script>
+    fetch("partials/header.html")
+        .then(r => r.text())
+        .then(html => {
+            document.getElementById("header").innerHTML = html;
+            return fetch("assets/data/empresa.json");
+        })
+        .then(r => r.json())
+        .then(data => {
+            const tel  = document.getElementById("empresa-telefono");
+            const mail = document.getElementById("empresa-email");
+            if (tel)  tel.innerText  = data.telefono;
+            if (mail) mail.innerText = data.email;
+        })
+        .catch(console.error);
+
+    fetch("partials/footer.html")
+        .then(r => r.text())
+        .then(html => { document.getElementById("footer").innerHTML = html; })
+        .catch(console.error);
+    </script>
+
+</body>
+</html>

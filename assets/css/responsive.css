@@ -1,0 +1,496 @@
+/* ================================================================
+   EL CÓNDOR – RESPONSIVE
+================================================================ */
+
+/* ----------------------------------------------------------------
+   Tablets (768px+)
+---------------------------------------------------------------- */
+@media (min-width: 768px) {
+
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding: 8px 10px;
+    }
+
+    .navbar-expand-md .navbar-nav .nav-item {
+        margin-right: 12px;
+    }
+
+    /* Nav link underline animation */
+    .main-header .nav-link {
+        position: relative;
+    }
+
+    .main-header .nav-link::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        background-color: #C05C20;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transition: all 0.3s ease;
+    }
+
+    .main-header .nav-link:hover::after {
+        width: 100%;
+        left: 0;
+    }
+
+    .cta-content {
+        border-top-right-radius: 200px;
+        border-bottom-left-radius: 200px;
+    }
+
+    .cta-content::after {
+        border-top-right-radius: 200px;
+        border-bottom-left-radius: 200px;
+    }
+
+    .cta-content .subscribe-btn {
+        align-self: flex-end;
+        margin-right: 30px;
+    }
+
+    .featured-img {
+        height: 100%;
+        margin-top: -66px;
+    }
+
+    .valorizacion {
+        padding-bottom: 60px;
+    }
+
+    .featured {
+        padding-top: 60px;
+    }
+}
+
+/* ----------------------------------------------------------------
+   Desktops (992px+)
+---------------------------------------------------------------- */
+@media (min-width: 992px) {
+
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding: 8px 13px;
+    }
+
+    .navbar-expand-md .navbar-nav .nav-item {
+        margin-right: 22px;
+    }
+
+    .title h2 {
+        font-size: 48px;
+    }
+}
+
+/* ----------------------------------------------------------------
+   Large desktops (1200px+)
+---------------------------------------------------------------- */
+@media (min-width: 1200px) {
+
+    .title h2 {
+        font-size: 58px;
+    }
+}
+
+/* ----------------------------------------------------------------
+   Mobile — max 768px
+---------------------------------------------------------------- */
+@media (max-width: 768px) {
+
+    /* ---- Header ---- */
+    .main-header {
+        width: calc(100% - 20px);
+        border-radius: 40px;
+        padding: 0 14px;
+    }
+
+    .brand-text {
+        display: none;
+    }
+
+    /* Toggler icon visible on dark header */
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .navbar-collapse {
+        background-color: #1B2342;
+        padding: 20px 0;
+        border-radius: 0 0 30px 30px;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+
+    .navbar-nav .nav-link {
+        color: #fff;
+        font-size: 1.1rem;
+    }
+
+    .nav-item-sgi {
+        justify-content: center;
+    }
+
+    /* ---- Hero home ---- */
+    .hero-home {
+        padding-top: 110px;
+        padding-bottom: 60px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .btn-hero-wa {
+        padding: 12px 28px;
+        font-size: 1rem;
+    }
+
+    /* ---- Hero inner (proyecto, empresa, etc.) ---- */
+    .hero-inner {
+        padding-top: 100px;
+        padding-bottom: 30px;
+    }
+
+    .hero.hero-inner .container .mt-3 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .hero.hero-inner .container .mt-3 .btn {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+    /* ---- Stats bar (index) — stack vertically ---- */
+    .stats-bar .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats-bar .stat-item {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 16px 0;
+        width: 100%;
+    }
+
+    .stats-bar .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    /* ---- Projects media list (index) ---- */
+    .proyectos .media {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .proyectos .media img {
+        margin-right: 0 !important;
+        margin-bottom: 14px;
+        width: 80px;
+        height: 80px;
+    }
+
+    /* ---- Simulator ---- */
+    .sim-form-card {
+        padding: 24px 18px;
+    }
+
+    .sim-resultado {
+        padding: 24px 18px;
+    }
+
+    /* ---- Leads / Contact form ---- */
+    .leads-form-card {
+        padding: 28px 22px;
+    }
+
+    /* ---- Testimonial card — stack vertically ---- */
+    .test-card {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .test-card-photo {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 16px 18px;
+        gap: 14px;
+    }
+
+    .test-card-photo img {
+        width: 68px;
+        height: 68px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .test-card-photo h5,
+    .test-card-photo span {
+        text-align: left;
+    }
+
+    .test-card-body {
+        padding: 18px;
+    }
+
+    /* ---- Floating WhatsApp ---- */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 16px;
+    }
+
+    /* ---- Chart ---- */
+    #graficaValorizacion {
+        width: 100% !important;
+        height: 260px !important;
+    }
+
+    /* ---- Featured ---- */
+    .featured-big,
+    .featured-small {
+        position: static;
+        transform: none;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        margin: 20px 0;
+        display: block;
+        z-index: auto;
+    }
+
+    .featured-img {
+        margin-top: 0;
+        height: auto;
+    }
+
+    .featured {
+        padding-bottom: 60px;
+        padding-top: 40px;
+    }
+
+    /* ---- Services ---- */
+    .services {
+        padding-top: 30px;
+        margin-top: 0;
+    }
+
+    .services .media img {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* ---- CTA ---- */
+    .cta-content {
+        border-radius: 20px;
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cta-content::after {
+        border-radius: 20px;
+    }
+
+    .cta-content .content,
+    .cta-content .subscribe-btn {
+        width: 100%;
+    }
+
+    .cta-content .subscribe-btn {
+        align-self: center !important;
+        margin-right: 0 !important;
+        text-align: center;
+    }
+
+    .cta-content .btn {
+        display: block !important;
+        width: 100% !important;
+        text-align: center;
+        margin-bottom: 14px;
+    }
+
+    /* ---- Valorización ---- */
+    .valorizacion {
+        padding-bottom: 40px;
+    }
+
+    .valorizacion canvas {
+        height: 280px;
+    }
+
+    /* ---- Gallery ---- */
+    .proyecto-galeria img {
+        height: 260px;
+    }
+
+    /* ---- Proyectos page — filter bar ---- */
+    .pf-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .pf-bar .filtro-clear {
+        margin-left: 0;
+    }
+
+    /* ---- Proyectos page — CTA card ---- */
+    .proyectos-cta {
+        padding: 60px 0;
+    }
+
+    .proyectos-cta-card {
+        padding: 28px 20px;
+        margin-top: 40px;
+    }
+
+    /* ---- Empresa page ---- */
+    .empresa-credenciales {
+        padding: 50px 0;
+    }
+
+    .empresa-cta-final {
+        padding: 60px 0;
+    }
+
+    /* ---- Proceso compra ---- */
+    .proceso-item {
+        margin-bottom: 16px;
+    }
+
+    /* ---- Footer ---- */
+    .footer-rich [class*="col-"] {
+        margin-bottom: 32px;
+    }
+
+    .footer-rich [class*="col-"]:last-child {
+        margin-bottom: 0;
+    }
+
+    /* ---- Proyecto detail — stats bar ---- */
+    .proy-stats-bar {
+        padding: 16px 0;
+    }
+
+    .proy-stat {
+        padding: 10px 8px;
+    }
+}
+
+/* ----------------------------------------------------------------
+   Small mobile — max 576px
+---------------------------------------------------------------- */
+@media (max-width: 576px) {
+
+    .hero {
+        margin-top: 60px;
+        padding-top: 40px;
+    }
+
+    /* ---- Hero titles tighter ---- */
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    /* ---- Stats — enforce single-column over Bootstrap cols ---- */
+    .stats-bar .row > [class*="col-"] {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* ---- Simulator chips ---- */
+    .sim-plazo-chips {
+        gap: 6px;
+    }
+
+    .sim-chip span {
+        padding: 7px 12px;
+        font-size: 0.8rem;
+    }
+
+    /* ---- Simulator cards full padding ---- */
+    .sim-form-card,
+    .sim-resultado {
+        padding: 20px 14px;
+        border-radius: 14px;
+    }
+
+    /* ---- Testimonial CTA ---- */
+    .testimonial-cta {
+        padding: 30px 18px;
+    }
+
+    /* ---- Leads form ---- */
+    .leads-form-card {
+        padding: 20px 14px;
+    }
+
+    /* ---- Gallery ---- */
+    .proyecto-galeria img {
+        height: 210px;
+    }
+
+    /* ---- Filter chips ---- */
+    .pf-chips {
+        gap: 6px;
+    }
+
+    /* ---- Proyecto detail — stats 2×2 ---- */
+    .proy-stat-val {
+        font-size: 0.9rem;
+    }
+
+    .proy-stat-label {
+        font-size: 0.6rem;
+    }
+
+    /* ---- Proyecto detail — hero ---- */
+    .hero-inner {
+        padding-top: 90px;
+    }
+
+    /* ---- Section title ---- */
+    .title h2 {
+        font-size: 26px;
+    }
+
+    /* ---- Empresa NIT badge ---- */
+    .empresa-nit-badge {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    /* ---- Leads info ---- */
+    .contacto-leads {
+        padding: 50px 0;
+    }
+}
