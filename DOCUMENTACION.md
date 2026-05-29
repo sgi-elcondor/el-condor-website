@@ -1,0 +1,169 @@
+# Documentación — Sitio web El Cóndor S.A.S
+
+Sitio **estático** (HTML + CSS + JavaScript vanilla + jQuery). **Sin build, sin
+backend, sin dependencias de npm.** Los datos se cargan en tiempo de ejecución
+desde archivos JSON con `fetch()`, por lo que el sitio **debe servirse por HTTP**
+(no abrir con `file://`).
+
+---
+
+## 1. Árbol de ficheros
+
+```
+Website/
+├── index.html              Página principal (home)
+├── empresa.html            Quiénes somos / misión / visión
+├── proyectos.html          Listado de proyectos con filtros
+├── proyecto.html           Detalle de UN proyecto (?id=slug)
+├── simulador.html          Simulador de cuotas / plan de pagos
+├── contacto.html           Datos de contacto + WhatsApp
+├── robots.txt              SEO: reglas para crawlers
+├── sitemap.xml             SEO: mapa del sitio
+├── README.md               Resumen e instrucciones de arranque
+├── DOCUMENTACION.md         Este archivo
+├── CLAUDE.md               Reglas de trabajo para el asistente (Claude)
+│
+├── partials/               Fragmentos HTML reutilizables (inyectados por fetch)
+│   ├── header.html         Navbar (logo + menú + botón Compradores)
+│   └── footer.html         Pie de página (contacto, redes, enlaces)
+│
+├── assets/
+│   ├── css/
+│   │   ├── style.css            Estilos propios del sitio (principal)
+│   │   ├── responsive.css       Ajustes responsive propios
+│   │   ├── bootstrap.css        Bootstrap (grid + componentes)
+│   │   ├── aos/aos.css          Animaciones al hacer scroll (AOS)
+│   │   ├── swiper/swiper.css    Carruseles (Swiper)
+│   │   ├── loader/loaders.css   Animación de carga inicial
+│   │   └── font-awesome/font-awesome.css   Íconos
+│   │
+│   ├── js/
+│   │   ├── app.js               Lógica propia: detalle de proyecto + gráfica
+│   │   ├── main.js              Lógica propia: AOS, slider testimonios, header
+│   │   ├── loaders.css.js       Genera el HTML del loader inicial
+│   │   ├── jquery-3.3.1.js      Librería jQuery
+│   │   ├── bootstrap.bundle.js  Bootstrap JS (+ Popper)
+│   │   ├── aos.js               Librería AOS
+│   │   └── swiper.min.js        Librería Swiper
+│   │
+│   ├── images/             Logos, fotos de proyectos, hero, equipo (23 archivos)
+│   ├── fonts/              Fuentes de Font Awesome (webfont.*)
+│   ├── data/
+│   │   ├── empresa.json         Datos de contacto/empresa (teléfonos, redes…)
+│   │   └── proyectos.json       Catálogo de proyectos (fuente de verdad)
+│   └── pdf/                Tablas de valores descargables (1 por proyecto)
+│
+└── output/                Tour virtual 360° (export de Pano2VR — independiente)
+    ├── index.html              Visor del tour
+    ├── pano2vr_player.js        Motor del visor
+    ├── pano.xml / gginfo.json   Configuración del panorama
+    └── tiles/                   134 imágenes (mosaicos del panorama)
+```
+
+---
+
+## 2. Cómo se componen las páginas
+
+Todas las páginas comparten la misma estructura y el mismo bloque de scripts al
+final del `<body>`:
+
+```html
+<div id="header-placeholder"></div>   <!-- relleno por fetch -->
+   ... contenido propio de la página ...
+<div id="footer-placeholder"></div>   <!-- relleno por fetch -->
+
+<script src="assets/js/jquery-3.3.1.js"></script>
+<script src="assets/js/bootstrap.bundle.js"></script>
+<script src="assets/js/loaders.css.js"></script>
+<script src="assets/js/aos.js"></script>
+<script src="assets/js/main.js"></script>
+<!-- swiper.min.js y app.js solo donde se necesitan -->
+```
+
+**Header y footer** no se copian en cada HTML: se cargan una sola vez desde
+`partials/` con `fetch()` e inyectan en los placeholders. Editar el menú o el
+pie se hace **solo** en `partials/header.html` / `partials/footer.html`.
+
+```js
+fetch("partials/header.html").then(r => r.text()).then(html => {
+    document.getElementById("header-placeholder").innerHTML = html;
+});
+```
+
+### Flujo de datos
+
+```
+proyectos.json ──► proyectos.html  (lista + filtros, script inline)
+               └─► proyecto.html   (detalle, app.js, lee ?id=slug)
+               └─► index.html      (proyectos destacados)
+
+empresa.json   ──► contacto.html / proyecto.html / simulador.html
+                   (rellena teléfono, email, WhatsApp)
+```
+
+**`proyectos.json` es la fuente de verdad del catálogo.** Agregar o editar un
+proyecto se hace ahí; las páginas se actualizan solas. Campos por proyecto:
+`id, slug, nombre, ciudad, departamento, tipo, logo, descripcion, ubicacion,
+ubicacionTexto, mapa, lat, lng, precioDesde, precioTexto, area,
+caracteristicas[], imagenes[], pdfPrecios`.
+
+---
+
+## 3. Detalle por archivo
+
+### Páginas HTML
+
+| Archivo           | Qué hace |
+|-------------------|----------|
+| `index.html`      | Home: hero, propuesta de valor, proyectos destacados, testimonios, CTA. Carga `app.js` y `swiper.min.js`. |
+| `empresa.html`    | Misión, visión, equipo y un Street View embebido de Google Maps. |
+| `proyectos.html`  | Renderiza tarjetas desde `proyectos.json` (script inline) y filtra por tipo/precio/área en el cliente. |
+| `proyecto.html`   | Página de detalle. Lee `?id=slug`, busca el proyecto en `proyectos.json` y rellena hero, galería (Swiper + lightGallery), mapa, características, Street View y PDF de precios. Genera meta-description y JSON-LD dinámicos para SEO. |
+| `simulador.html`  | Calculadora de cuotas: precio, cuota inicial (con opción de dividirla), número de meses y día de pago. Calcula todo **en el cliente** (no usa JSON de lotes). |
+| `contacto.html`   | Datos de contacto y botón de WhatsApp; rellena teléfono/email desde `empresa.json`. |
+
+### JavaScript propio
+
+| Archivo            | Responsabilidad |
+|--------------------|-----------------|
+| `app.js`           | Dos bloques independientes, cada uno protegido por una comprobación de existencia: (1) gráfica de valorización con Chart.js *(requiere incluir Chart.js; hoy el canvas no está presente → bloque inactivo)*; (2) renderizado del detalle de proyecto en `proyecto.html`. |
+| `main.js`          | Inicializa AOS, el slider de testimonios (Swiper con autoplay), el ocultamiento del header al hacer scroll y el fade-out del loader. |
+| `loaders.css.js`   | Inserta el marcado del spinner de carga inicial. |
+
+### Datos (`assets/data/`)
+
+| Archivo           | Contenido |
+|-------------------|-----------|
+| `empresa.json`    | Razón social, NIT, teléfonos, WhatsApp, email, oficina, horario y redes sociales. |
+| `proyectos.json`  | Array de proyectos (catálogo completo). Fuente única para listado, detalle y destacados. |
+
+### Librerías de terceros
+
+- **Locales** (`assets/js`, `assets/css`): jQuery, Bootstrap, AOS, Swiper, Font Awesome.
+- **Por CDN** (solo en `proyecto.html`): lightGallery 2.7.1 (galería a pantalla completa).
+- **Fuentes**: Google Fonts (Open Sans + Rajdhani).
+
+### Tour virtual (`output/`)
+
+Export autónomo de **Pano2VR**. Funciona por sí solo abriendo `output/index.html`,
+pero **actualmente no está enlazado** desde ninguna página del sitio.
+
+---
+
+## 4. Desarrollo local
+
+```bash
+python -m http.server 8000      # o:  npx serve .
+```
+Abrir <http://localhost:8000>. Es obligatorio servir por HTTP porque los
+`fetch()` de partials y JSON fallan con `file://`.
+
+---
+
+## 5. Convenciones
+
+- **Rutas relativas** siempre (`assets/...`, `partials/...`) — el sitio puede vivir en un subdirectorio.
+- **Nombres de archivo** en minúsculas y sin espacios ni tildes (kebab-case en los PDF).
+- **Idioma del contenido**: español (`lang="es-CO"`).
+- **No duplicar** header/footer en los HTML: editar solo en `partials/`.
+- **No reintroducir** dependencias sin uso (se depuró la plantilla original).
