@@ -148,7 +148,7 @@ los filtros de `proyectos.html`.
 
 - **Locales** (`assets/js`, `assets/css`): jQuery, Bootstrap, AOS, Swiper, Font Awesome.
 - **Por CDN** (solo en `proyecto.html`): lightGallery 2.7.1 (galería a pantalla completa).
-- **Fuentes**: Google Fonts (Open Sans + Rajdhani).
+- **Fuentes**: Google Fonts (Montserrat — títulos ExtraBold 800, texto Regular).
 
 ### Tour virtual (`output/`)
 

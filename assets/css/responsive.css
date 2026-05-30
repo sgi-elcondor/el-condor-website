@@ -78,8 +78,10 @@
     /* ---- Header ---- */
     .main-header {
         width: calc(100% - 20px);
-        border-radius: 40px;
+        border-radius: 26px;
         padding: 0 14px;
+        background: #1B2342;          /* pastilla opaca: una sola pieza */
+        overflow: hidden;            /* recorta el menú a las esquinas */
     }
 
     .brand-text {
@@ -91,9 +93,10 @@
     }
 
     .navbar-collapse {
-        background-color: #1B2342;
-        padding: 20px 0;
-        border-radius: 0 0 30px 30px;
+        background-color: transparent;
+        padding: 10px 0 4px;
+        margin-top: 8px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .navbar-nav {
@@ -173,10 +176,11 @@
         font-size: 2rem;
     }
 
-    /* ---- Tarjetas de proyecto (index) — apilado vertical ---- */
+    /* ---- Tarjetas de proyecto (index) — apilado vertical y centrado ---- */
     .proyectos .media {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
     }
 
     .proyectos .media img {
@@ -285,13 +289,30 @@
         padding: 60px 0;
     }
 
-    /* ---- Footer ---- */
+    /* ---- Footer — centrado ---- */
+    .footer-rich {
+        text-align: center;
+    }
+
     .footer-rich [class*="col-"] {
         margin-bottom: 32px;
     }
 
     .footer-rich [class*="col-"]:last-child {
         margin-bottom: 0;
+    }
+
+    .footer-logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-indent {
+        padding-left: 0;
     }
 
     /* ---- Stats bar (detalle de proyecto) ---- */
