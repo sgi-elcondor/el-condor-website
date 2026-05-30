@@ -41,7 +41,9 @@ Website/
 │   ├── js/
 │   │   ├── app.js               Lógica propia: detalle de proyecto + gráfica
 │   │   ├── main.js              Lógica propia: AOS, slider testimonios, header
-│   │   ├── loaders.css.js       Genera el HTML del loader inicial
+│   │   ├── proyectos.js         Renderiza tarjetas (index + proyectos.html) desde JSON + filtros
+│   │   ├── simulador.js         Simulador de cuotas (index simple + simulador.html con cronograma)
+│   │   ├── partials.js          Inyecta header/footer y rellena contacto desde empresa.json
 │   │   ├── jquery-3.3.1.js      Librería jQuery
 │   │   ├── bootstrap.bundle.js  Bootstrap JS (+ Popper)
 │   │   ├── aos.js               Librería AOS
@@ -69,27 +71,23 @@ Todas las páginas comparten la misma estructura y el mismo bloque de scripts al
 final del `<body>`:
 
 ```html
-<div id="header-placeholder"></div>   <!-- relleno por fetch -->
+<div id="header"></div>   <!-- relleno por partials.js -->
    ... contenido propio de la página ...
-<div id="footer-placeholder"></div>   <!-- relleno por fetch -->
+<div id="footer"></div>   <!-- relleno por partials.js -->
 
 <script src="assets/js/jquery-3.3.1.js"></script>
 <script src="assets/js/bootstrap.bundle.js"></script>
-<script src="assets/js/loaders.css.js"></script>
 <script src="assets/js/aos.js"></script>
 <script src="assets/js/main.js"></script>
-<!-- swiper.min.js y app.js solo donde se necesitan -->
+<script src="assets/js/partials.js"></script>
+<!-- swiper.min.js, app.js y proyectos.js solo donde se necesitan -->
 ```
 
-**Header y footer** no se copian en cada HTML: se cargan una sola vez desde
-`partials/` con `fetch()` e inyectan en los placeholders. Editar el menú o el
-pie se hace **solo** en `partials/header.html` / `partials/footer.html`.
-
-```js
-fetch("partials/header.html").then(r => r.text()).then(html => {
-    document.getElementById("header-placeholder").innerHTML = html;
-});
-```
+**Header y footer** no se copian en cada HTML: `partials.js` los carga una sola
+vez desde `partials/` con `fetch()` e inyecta en los contenedores `#header` /
+`#footer`. Editar el menú o el pie se hace **solo** en `partials/header.html` /
+`partials/footer.html`. El mismo `partials.js` rellena teléfono/email desde
+`empresa.json` en las páginas que muestran `#empresa-telefono` / `#empresa-email`.
 
 ### Flujo de datos
 
@@ -105,8 +103,10 @@ empresa.json   ──► contacto.html / proyecto.html / simulador.html
 **`proyectos.json` es la fuente de verdad del catálogo.** Agregar o editar un
 proyecto se hace ahí; las páginas se actualizan solas. Campos por proyecto:
 `id, slug, nombre, ciudad, departamento, tipo, logo, descripcion, ubicacion,
-ubicacionTexto, mapa, lat, lng, precioDesde, precioTexto, area,
-caracteristicas[], imagenes[], pdfPrecios`.
+ubicacionTexto, mapa, lat, lng, precioDesde, precioTexto, precioCat, area,
+areaCat, caracteristicas[], imagenes[], pdfPrecios`. `precioCat`
+(`economico`/`premium`) y `areaCat` (`compacto`/`mediano`/`grande`) alimentan
+los filtros de `proyectos.html`.
 
 ---
 
@@ -116,9 +116,9 @@ caracteristicas[], imagenes[], pdfPrecios`.
 
 | Archivo           | Qué hace |
 |-------------------|----------|
-| `index.html`      | Home: hero, propuesta de valor, proyectos destacados, testimonios, CTA. Carga `app.js` y `swiper.min.js`. |
+| `index.html`      | Home: hero, propuesta de valor, proyectos destacados, simulador inline, testimonios, CTA. Carga `swiper.min.js`. |
 | `empresa.html`    | Misión, visión, equipo y un Street View embebido de Google Maps. |
-| `proyectos.html`  | Renderiza tarjetas desde `proyectos.json` (script inline) y filtra por tipo/precio/área en el cliente. |
+| `proyectos.html`  | Renderiza tarjetas desde `proyectos.json` (vía `proyectos.js`) y filtra por tipo/precio/área en el cliente. |
 | `proyecto.html`   | Página de detalle. Lee `?id=slug`, busca el proyecto en `proyectos.json` y rellena hero, galería (Swiper + lightGallery), mapa, características, Street View y PDF de precios. Genera meta-description y JSON-LD dinámicos para SEO. |
 | `simulador.html`  | Calculadora de cuotas: precio, cuota inicial (con opción de dividirla), número de meses y día de pago. Calcula todo **en el cliente** (no usa JSON de lotes). |
 | `contacto.html`   | Datos de contacto y botón de WhatsApp; rellena teléfono/email desde `empresa.json`. |
@@ -129,7 +129,9 @@ caracteristicas[], imagenes[], pdfPrecios`.
 |--------------------|-----------------|
 | `app.js`           | Dos bloques independientes, cada uno protegido por una comprobación de existencia: (1) gráfica de valorización con Chart.js *(requiere incluir Chart.js; hoy el canvas no está presente → bloque inactivo)*; (2) renderizado del detalle de proyecto en `proyecto.html`. |
 | `main.js`          | Inicializa AOS, el slider de testimonios (Swiper con autoplay), el ocultamiento del header al hacer scroll y el fade-out del loader. |
-| `loaders.css.js`   | Inserta el marcado del spinner de carga inicial. |
+| `proyectos.js`     | Carga `proyectos.json` y pinta las tarjetas: destacados en `index.html` (`#proyectos-destacados`) y la lista filtrable de `proyectos.html` (`#proyectos-grid`), incluida la lógica de filtros por tipo/precio/área. |
+| `simulador.js`     | Lógica del simulador de cuotas, compartida por `index.html` (versión simple) y `simulador.html` (añade split de la inicial, día de pago y cronograma). Las funciones extra se activan solo si sus elementos existen en la página. |
+| `partials.js`      | Inyecta `partials/header.html` y `partials/footer.html` en `#header`/`#footer` (todas las páginas) y rellena teléfono/email desde `empresa.json` donde existen `#empresa-telefono`/`#empresa-email`. |
 
 ### Datos (`assets/data/`)
 

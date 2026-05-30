@@ -1,10 +1,9 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-CO">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Contacto | El Cóndor S.A.S</title>
     <meta name="description" content="Contáctanos para asesoría personalizada sobre lotes en Tolima. Atención lunes a domingo de 9 a.m. a 5:30 p.m. Respuesta en menos de 24 horas.">
     <meta name="robots" content="index, follow">
@@ -28,114 +27,15 @@
       }
     }
     </script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i%7CRajdhani:400,600,700" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i%7CRajdhani:400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/loader/loaders.css">
     <link rel="stylesheet" href="assets/css/font-awesome/font-awesome.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/aos/aos.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <style>
-    .contacto-section { background: #f7f8fb; padding: 80px 0; }
-
-    .ct-card {
-        border-radius: 12px;
-        overflow: hidden;
-        border: 1px solid #e3e6f0;
-        box-shadow: 0 2px 16px rgba(27,35,66,0.08);
-        background: #fff;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    .ct-card-header {
-        background: #1B2342;
-        padding: 18px 24px;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        flex-shrink: 0;
-    }
-    .ct-card-header i { color: #C05C20; font-size: 1.15rem; }
-    .ct-card-header h5 {
-        color: #fff;
-        margin: 0;
-        font-family: 'Rajdhani', sans-serif;
-        font-size: 1.05rem;
-        font-weight: 700;
-        letter-spacing: 0.4px;
-    }
-    .ct-card-body { padding: 24px; flex: 1; }
-
-    .ct-info-label {
-        font-family: 'Rajdhani', sans-serif;
-        font-size: 0.70rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.9px;
-        color: #1B2342;
-        margin-bottom: 5px;
-    }
-    .ct-info-value {
-        font-size: 0.91rem;
-        color: #555;
-        margin-bottom: 18px;
-        line-height: 1.7;
-    }
-    .ct-info-value a {
-        color: #C05C20;
-        text-decoration: none;
-        font-weight: 600;
-        display: inline-block;
-    }
-    .ct-info-value a:hover { text-decoration: underline; }
-
-    .ct-divider { border-color: #e3e6f0; margin: 20px 0; }
-
-    .ct-btn-wa {
-        background: #25D366;
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        padding: 11px 18px;
-        font-family: 'Rajdhani', sans-serif;
-        font-size: 0.97rem;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        width: 100%;
-        text-decoration: none;
-        transition: background 0.2s;
-    }
-    .ct-btn-wa:hover { background: #1ebe5d; color: #fff; text-decoration: none; }
-
-    .ct-form-label {
-        font-family: 'Rajdhani', sans-serif;
-        font-size: 0.70rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.8px;
-        color: #1B2342;
-        margin-bottom: 6px;
-    }
-    .ct-form-control {
-        border: 1px solid #dde0eb;
-        border-radius: 8px;
-        padding: 10px 14px;
-        font-size: 0.91rem;
-        color: #333;
-        background: #fafbff;
-        transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .ct-form-control:focus {
-        border-color: #C05C20;
-        box-shadow: 0 0 0 3px rgba(192,92,32,0.12);
-        outline: none;
-        background: #fff;
-    }
-    </style>
 </head>
 
 <body>
@@ -168,7 +68,7 @@
         <div class="container">
 
             <div class="title text-center mb-5">
-                <h6>Contacto</h6>
+                <p class="eyebrow">Contacto</p>
                 <h2 class="title-blue">Asesoría personalizada</h2>
                 <p>Atención directa · Información clara · Sin compromiso</p>
             </div>
@@ -231,7 +131,7 @@
                             <h5>Déjanos tus datos</h5>
                         </div>
                         <div class="ct-card-body">
-                            <form id="contactForm" onsubmit="enviarWhatsApp(event)">
+                            <form id="contactForm">
 
                                 <div class="form-group">
                                     <label class="ct-form-label" for="nombre">Nombre completo</label>
@@ -290,51 +190,25 @@
 
     <script src="assets/js/jquery-3.3.1.js"></script>
     <script src="assets/js/bootstrap.bundle.js"></script>
-    <script src="assets/js/loaders.css.js"></script>
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/main.js"></script>
 
     <script>
-    function enviarWhatsApp(event) {
-        event.preventDefault();
-        var nombre   = document.getElementById("nombre").value;
-        var email    = document.getElementById("email").value;
-        var telefono = document.getElementById("telefono").value;
-        var proyecto = document.getElementById("proyecto").value;
-        var mensaje  = document.getElementById("mensaje").value;
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const val = id => document.getElementById(id).value.trim();
+        const texto = "Hola, quiero información sobre proyectos de El Cóndor.\n\n"
+            + "Nombre: " + val("nombre") + "\n"
+            + "Correo: " + val("email") + "\n"
+            + "Teléfono: " + val("telefono") + "\n"
+            + "Proyecto de interés: " + val("proyecto") + "\n\n"
+            + "Mensaje:\n" + val("mensaje");
 
-        var texto = "Hola, quiero información sobre proyectos de El Cóndor.\n\n"
-            + "Nombre: " + nombre + "\n"
-            + "Correo: " + email + "\n"
-            + "Teléfono: " + telefono + "\n"
-            + "Proyecto de interés: " + proyecto + "\n\n"
-            + "Mensaje:\n" + mensaje;
-
-        window.open("https://wa.me/573143157524?text=" + encodeURIComponent(texto), "_blank");
-    }
+        window.open("https://wa.me/573143157524?text=" + encodeURIComponent(texto), "_blank", "noopener");
+    });
     </script>
 
-    <script>
-    fetch("partials/header.html")
-        .then(r => r.text())
-        .then(html => {
-            document.getElementById("header").innerHTML = html;
-            return fetch("assets/data/empresa.json");
-        })
-        .then(r => r.json())
-        .then(data => {
-            var tel  = document.getElementById("empresa-telefono");
-            var mail = document.getElementById("empresa-email");
-            if (tel)  tel.innerText = data.telefono;
-            if (mail) mail.innerText = data.email;
-        })
-        .catch(console.error);
-
-    fetch("partials/footer.html")
-        .then(r => r.text())
-        .then(html => { document.getElementById("footer").innerHTML = html; })
-        .catch(console.error);
-    </script>
+    <script src="assets/js/partials.js"></script>
 
 </body>
 </html>

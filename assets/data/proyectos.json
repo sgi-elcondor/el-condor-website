@@ -16,6 +16,8 @@
     "precioDesde": 38000000,
     "precioTexto": "$38.000.000",
     "area": "72 m²",
+    "precioCat": "economico",
+    "areaCat": "compacto",
     "caracteristicas": ["Urbanización abierta", "Servicios básicos", "Sin intereses", "Financiación hasta 36 meses"],
     "imagenes": [
       "assets/images/dron1.jpeg",
@@ -45,6 +47,8 @@
     "precioDesde": null,
     "precioTexto": "Consultar",
     "area": "Desde 102 m²",
+    "precioCat": "premium",
+    "areaCat": "mediano",
     "caracteristicas": ["Conjunto privado", "Portería 24h", "Vías internas", "Financiación directa"],
     "imagenes": [
       "assets/images/logoesmeraldaluxury.jpeg"
@@ -69,6 +73,8 @@
     "precioDesde": 32000000,
     "precioTexto": "$32.000.000",
     "area": "72 m²",
+    "precioCat": "economico",
+    "areaCat": "compacto",
     "caracteristicas": ["Urbanización abierta", "Precio accesible", "Sin intereses", "Financiación hasta 36 meses"],
     "imagenes": [
       "assets/images/logotopacio.jpg"
@@ -93,6 +99,8 @@
     "precioDesde": null,
     "precioTexto": "Consultar",
     "area": "Desde 98 m²",
+    "precioCat": "premium",
+    "areaCat": "mediano",
     "caracteristicas": ["Condominio cerrado", "Zonas comunes", "Portería 24h", "Financiación directa"],
     "imagenes": [
       "assets/images/logotopacioluxury.jpeg"
@@ -117,6 +125,8 @@
     "precioDesde": null,
     "precioTexto": "Consultar",
     "area": "Desde 500 m²",
+    "precioCat": "premium",
+    "areaCat": "grande",
     "caracteristicas": ["Condominio campestre", "Agua y energía", "Alcantarillado", "Lotes grandes"],
     "imagenes": [
       "assets/images/logopuertadeoro.jpeg"

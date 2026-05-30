@@ -204,106 +204,12 @@
                 <h2 class="title-blue">Proyectos disponibles</h2>
             </div>
 
-            <div class="container proyectos">
-                <div class="row">
-
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="media" data-aos="fade-up" data-aos-delay="100" data-aos-duration="400">
-                            <img class="mr-4" src="assets/images/logolaesmeralda.jpg" alt="La Esmeralda" loading="lazy">
-                            <div class="media-body">
-                                <h3 class="proyecto-card-title">La Esmeralda</h3>
-                                <p class="proyecto-card-meta">Flandes, Tolima · Urbanización abierta</p>
-                                <p class="proyecto-card-desc">Lotes de 72 m² con valorización garantizada cerca al Río Magdalena.</p>
-                                <ul class="list-unstyled small mt-2">
-                                    <li><strong>Desde:</strong> $38.000.000</li>
-                                    <li><strong>Área:</strong> 72 m²</li>
-                                </ul>
-                                <div class="mt-2">
-                                    <a href="/proyecto?id=esmeralda" class="btn btn-outline-primary btn-sm">Ver proyecto</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="media" data-aos="fade-up" data-aos-delay="200" data-aos-duration="400">
-                            <img class="mr-4" src="assets/images/logoesmeraldaluxury.jpeg" alt="Esmeralda Luxury" loading="lazy">
-                            <div class="media-body">
-                                <h3 class="proyecto-card-title">La Esmeralda Luxury</h3>
-                                <p class="proyecto-card-meta">Flandes, Tolima · Conjunto privado</p>
-                                <p class="proyecto-card-desc">Exclusividad y seguridad en lotes amplios dentro de un conjunto cerrado.</p>
-                                <ul class="list-unstyled small mt-2">
-                                    <li><strong>Área:</strong> Desde 102 m²</li>
-                                    <li><strong>Tipo:</strong> Conjunto privado</li>
-                                </ul>
-                                <div class="mt-2">
-                                    <a href="/proyecto?id=esmeralda-luxury" class="btn btn-outline-primary btn-sm">Ver proyecto</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="media" data-aos="fade-up" data-aos-delay="300" data-aos-duration="400">
-                            <img class="mr-4" src="assets/images/logopuertadeoro.jpeg" alt="Puerta de Oro" loading="lazy">
-                            <div class="media-body">
-                                <h3 class="proyecto-card-title">Puerta de Oro</h3>
-                                <p class="proyecto-card-meta">Flandes, Tolima · Condominio campestre</p>
-                                <p class="proyecto-card-desc">Grandes lotes con servicios básicos en un entorno natural privilegiado.</p>
-                                <ul class="list-unstyled small mt-2">
-                                    <li><strong>Área:</strong> Desde 500 m²</li>
-                                    <li><strong>Servicios:</strong> Agua, energía, alcantarillado</li>
-                                </ul>
-                                <div class="mt-2">
-                                    <a href="/proyecto?id=puerta-de-oro" class="btn btn-outline-primary btn-sm">Ver proyecto</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row justify-content-center mt-2">
-
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="media" data-aos="fade-up" data-aos-delay="100" data-aos-duration="400">
-                            <img class="mr-4" src="assets/images/logotopacio.jpg" alt="Topacio" loading="lazy">
-                            <div class="media-body">
-                                <h3 class="proyecto-card-title">Topacio</h3>
-                                <p class="proyecto-card-meta">Flandes, Tolima · Urbanización</p>
-                                <p class="proyecto-card-desc">El punto de entrada ideal para invertir en el Tolima con financiación directa.</p>
-                                <ul class="list-unstyled small mt-2">
-                                    <li><strong>Desde:</strong> $32.000.000</li>
-                                    <li><strong>Área:</strong> 72 m²</li>
-                                </ul>
-                                <div class="mt-2">
-                                    <a href="/proyecto?id=topacio" class="btn btn-outline-primary btn-sm">Ver proyecto</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="media" data-aos="fade-up" data-aos-delay="200" data-aos-duration="400">
-                            <img class="mr-4" src="assets/images/logotopacioluxury.jpeg" alt="Topacio Luxury" loading="lazy">
-                            <div class="media-body">
-                                <h3 class="proyecto-card-title">Topacio Luxury</h3>
-                                <p class="proyecto-card-meta">Flandes, Tolima · Condominio</p>
-                                <p class="proyecto-card-desc">Condominio cerrado de alto estándar en una de las zonas de mayor desarrollo.</p>
-                                <ul class="list-unstyled small mt-2">
-                                    <li><strong>Área:</strong> Desde 98 m²</li>
-                                    <li><strong>Tipo:</strong> Condominio</li>
-                                </ul>
-                                <div class="mt-2">
-                                    <a href="/proyecto?id=topacio-luxury" class="btn btn-outline-primary btn-sm">Ver proyecto</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="proyectos">
+                <div class="row" id="proyectos-destacados"></div>
             </div>
         </div>
     </section>
+
     <section class="servicios-cta">
         <div class="container text-center">
             <a href="/proyectos" class="btn btn-primary px-5 py-3 btn-ver-todos">
@@ -311,7 +217,6 @@
             </a>
         </div>
     </section>
-
 
     <section class="simulador-inline" id="simulador" data-aos="fade-up">
         <div class="container">
@@ -391,7 +296,7 @@
                 </div>
 
                 <div class="col-md-5">
-                    <div class="sim-resultado" id="sim-resultado">
+                    <div class="sim-resultado" id="sim-resultado" aria-live="polite">
                         <div class="sim-resultado-header">
                             <i class="fa fa-bar-chart"></i>
                             <h3>Resultado de la simulación</h3>
@@ -501,7 +406,7 @@
                         <h2>Quienes ya invirtieron con El Cóndor hablan por nosotros</h2>
                     </div>
                     <div class="test-rating-bar">
-                        <span class="stars">★★★★★</span>
+                        <span class="stars" aria-hidden="true">★★★★★</span>
                         <span class="rating-text">4.84 / 5 · Basado en más de 600 compradores satisfechos</span>
                     </div>
                     <div class="testimonials">
@@ -516,7 +421,7 @@
                                             <span>Inversionista<br>Bogotá</span>
                                         </div>
                                         <div class="test-card-body">
-                                            <div class="test-stars">★★★★★</div>
+                                            <div class="test-stars" aria-hidden="true">★★★★★</div>
                                             <p>"Aparté mi lote con solo $1.000.000 y hoy estoy pagando una cuota mensual muy baja a 30 meses. Además me dejaron pagar la cuota inicial en varios plazos, eso me ayudó muchísimo. Nunca pensé que fuera tan fácil."</p>
                                         </div>
                                     </div>
@@ -530,7 +435,7 @@
                                             <span>Comprador<br>Medellín</span>
                                         </div>
                                         <div class="test-card-body">
-                                            <div class="test-stars">★★★★★</div>
+                                            <div class="test-stars" aria-hidden="true">★★★★★</div>
                                             <p>"Contraté un abogado para revisar todo antes de firmar. Confirmó que El Cóndor tiene licencias gubernamentales, Cámara de Comercio y todos los documentos en regla. Invertí con total tranquilidad."</p>
                                         </div>
                                     </div>
@@ -544,7 +449,7 @@
                                             <span>Propietario<br>Flandes, Tolima</span>
                                         </div>
                                         <div class="test-card-body">
-                                            <div class="test-stars">★★★★★</div>
+                                            <div class="test-stars" aria-hidden="true">★★★★★</div>
                                             <p>"Compré en La Esmeralda y ya me entregaron mi lote. Hoy estoy construyendo mi casa de descanso. El proceso fue rápido, claro y sin sorpresas. Recomiendo El Cóndor al 100%."</p>
                                         </div>
                                     </div>
@@ -579,123 +484,12 @@
 
     <script src="assets/js/jquery-3.3.1.js"></script>
     <script src="assets/js/bootstrap.bundle.js"></script>
-    <script src="assets/js/loaders.css.js"></script>
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/proyectos.js"></script>
 
-    <script>
-    (function () {
-        const precioInput   = document.getElementById("sim-precio");
-        const inicialInput  = document.getElementById("sim-inicial");
-        const mesesInput    = document.getElementById("sim-meses");
-        const simBtn        = document.getElementById("sim-btn");
-        const resultado     = document.getElementById("sim-resultado");
-        const permutaCheck  = document.getElementById("sim-permuta-check");
-        const permutaFields = document.getElementById("sim-permuta-fields");
-        const permutaValor  = document.getElementById("sim-permuta-valor");
-
-        if (!precioInput) return;
-
-        function formatCOP(val) {
-            const digits = val.replace(/\D/g, "");
-            return digits.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-        }
-
-        function parseCOP(val) {
-            return parseInt(val.replace(/\./g, ""), 10) || 0;
-        }
-
-        function fmt(n) {
-            return "$ " + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-        }
-
-        [precioInput, inicialInput, permutaValor].forEach(function (el) {
-            el.addEventListener("input", function () {
-                const pos  = this.selectionStart;
-                const prev = this.value.length;
-                this.value = formatCOP(this.value);
-                const diff = this.value.length - prev;
-                this.setSelectionRange(pos + diff, pos + diff);
-            });
-        });
-
-        mesesInput.addEventListener("input", function () {
-            this.value = this.value.replace(/\D/g, "");
-        });
-
-        permutaCheck.addEventListener("change", function () {
-            permutaFields.style.display = this.checked ? "block" : "none";
-            if (!this.checked) {
-                permutaValor.value = "";
-                document.getElementById("sim-permuta-desc").value = "";
-            }
-        });
-
-        simBtn.addEventListener("click", function () {
-            const precio  = parseCOP(precioInput.value);
-            const inicial = parseCOP(inicialInput.value);
-            const meses   = parseInt(mesesInput.value, 10) || 0;
-            const permuta = permutaCheck.checked ? parseCOP(permutaValor.value) : 0;
-
-            // La permuta se descuenta del precio antes de calcular el saldo,
-            // por eso la cuota inicial se valida contra el precio ya ajustado.
-            const precioAjustado = precio - permuta;
-
-            let valid = true;
-            if (!precio || precio <= 0) {
-                precioInput.classList.add("is-invalid"); valid = false;
-            } else {
-                precioInput.classList.remove("is-invalid");
-            }
-            if (permuta > 0 && permuta >= precio) {
-                permutaValor.classList.add("is-invalid"); valid = false;
-            } else {
-                permutaValor.classList.remove("is-invalid");
-            }
-            if (!inicial || inicial <= 0 || inicial >= precioAjustado) {
-                inicialInput.classList.add("is-invalid"); valid = false;
-            } else {
-                inicialInput.classList.remove("is-invalid");
-            }
-            if (!meses || meses <= 0) {
-                mesesInput.classList.add("is-invalid"); valid = false;
-            } else {
-                mesesInput.classList.remove("is-invalid");
-            }
-            if (!valid) return;
-
-            const saldo = Math.max(precioAjustado - inicial, 0);
-            const cuota = meses > 0 ? Math.round(saldo / meses) : 0;
-
-            const animIds = ["res-precio", "res-inicial", "res-saldo", "res-cuota"];
-            if (permuta > 0) animIds.push("res-permuta");
-            animIds.forEach(function (id) {
-                const el = document.getElementById(id);
-                if (!el) return;
-                el.classList.remove("sim-val-anim");
-                void el.offsetWidth;
-                el.classList.add("sim-val-anim");
-            });
-
-            document.getElementById("res-precio").textContent  = fmt(precio);
-            document.getElementById("res-inicial").textContent = fmt(inicial);
-            document.getElementById("res-saldo").textContent   = fmt(saldo);
-            document.getElementById("res-cuota").textContent   = fmt(cuota);
-
-            const permutaRow = document.getElementById("res-permuta-row");
-            if (permuta > 0) {
-                document.getElementById("res-permuta").textContent = "– " + fmt(permuta);
-                permutaRow.style.display = "flex";
-            } else {
-                permutaRow.style.display = "none";
-            }
-
-            resultado.classList.add("sim-activo");
-        });
-    })();
-    </script>
+    <script src="assets/js/simulador.js"></script>
 
     <script>
     const leadForm = document.getElementById("form-leads");
@@ -716,18 +510,7 @@
     }
     </script>
 
-    <script>
-    // Carga de parciales compartidos (header y footer)
-    fetch("partials/header.html")
-        .then(r => r.text())
-        .then(html => { document.getElementById("header").innerHTML = html; })
-        .catch(console.error);
-
-    fetch("partials/footer.html")
-        .then(r => r.text())
-        .then(html => { document.getElementById("footer").innerHTML = html; })
-        .catch(console.error);
-    </script>
+    <script src="assets/js/partials.js"></script>
 
 </body>
 </html>

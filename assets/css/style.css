@@ -1057,6 +1057,10 @@ body {
     text-align: center;
 }
 
+.footer-indent {
+    padding-left: 18px;
+}
+
 .footer-list a {
     color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
@@ -1170,6 +1174,10 @@ body {
     margin-bottom: 6px;
 }
 
+.credencial-valor-sm {
+    font-size: 13px;
+}
+
 .credencial-desc {
     font-size: 13px;
     color: #666;
@@ -1252,6 +1260,15 @@ body {
 /* Legalidad section */
 .empresa-legalidad {
     background: #fff;
+}
+
+/* Imágenes de las secciones de empresa */
+.empresa-foto {
+    border-radius: 16px;
+}
+
+.empresa-foto-legal {
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18);
 }
 
 .empresa-lista {
@@ -1375,6 +1392,11 @@ body {
     padding: 70px 0 40px;
     background: #f7f8fc;
 }
+
+/* Estado vacío (sin resultados de filtros) */
+.estado-vacio i  { color: #ddd; }
+.estado-vacio h5 { color: #999; }
+.estado-vacio p  { color: #bbb; }
 
 /* Tarjeta de proyecto */
 .proy-card {
@@ -2383,6 +2405,11 @@ body {
     box-shadow: 0 10px 36px rgba(0, 0, 0, 0.12);
 }
 
+/* Iframes embebidos (mapa, street view, PDF de precios) */
+.proy-iframe {
+    border: 0;
+}
+
 /* Street view */
 .proy-sv-section {
     padding: 70px 0;
@@ -2444,3 +2471,205 @@ body {
     letter-spacing: 0.5px;
     line-height: 1.45;
 }
+
+/* ===== Página de contacto ===== */
+.contacto-section { background: #f7f8fb; padding: 80px 0; }
+
+.ct-card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e3e6f0;
+    box-shadow: 0 2px 16px rgba(27, 35, 66, 0.08);
+    background: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.ct-card-header {
+    background: #1B2342;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+.ct-card-header i { color: #C05C20; font-size: 1.15rem; }
+.ct-card-header h5 {
+    color: #fff;
+    margin: 0;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+.ct-card-body { padding: 24px; flex: 1; }
+
+.ct-info-label {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.70rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    color: #1B2342;
+    margin-bottom: 5px;
+}
+.ct-info-value {
+    font-size: 0.91rem;
+    color: #555;
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+.ct-info-value a {
+    color: #C05C20;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+}
+.ct-info-value a:hover { text-decoration: underline; }
+
+.ct-divider { border-color: #e3e6f0; margin: 20px 0; }
+
+.ct-btn-wa {
+    background: #25D366;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.97rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.ct-btn-wa:hover { background: #1ebe5d; color: #fff; text-decoration: none; }
+
+.ct-form-label {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.70rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #1B2342;
+    margin-bottom: 6px;
+}
+.ct-form-control {
+    border: 1px solid #dde0eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.91rem;
+    color: #333;
+    background: #fafbff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.ct-form-control:focus {
+    border-color: #C05C20;
+    box-shadow: 0 0 0 3px rgba(192, 92, 32, 0.12);
+    outline: none;
+    background: #fff;
+}
+
+/* ===== Simulador: cronograma de pagos (simulador.html) ===== */
+.simulador-page { background: #f7f8fb; }
+
+.sim-escritura-ico { color: #C05C20; }
+.sim-escritura-val { color: #C05C20; font-size: 0.85rem; font-weight: 700; }
+.sim-nota-ico { color: #999; }
+
+.cronograma-wrapper {
+    margin-top: 48px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e3e6f0;
+    box-shadow: 0 2px 16px rgba(27, 35, 66, 0.08);
+}
+.cronograma-header {
+    background: #1B2342;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.cronograma-header i { color: #C05C20; font-size: 1.15rem; }
+.cronograma-header h4 {
+    color: #fff;
+    margin: 0;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+.crono-meta {
+    margin-left: auto;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.76rem;
+    white-space: nowrap;
+}
+.cronograma-scroll {
+    max-height: 420px;
+    overflow-y: auto;
+    background: #fff;
+}
+.cronograma-table {
+    margin: 0;
+    font-size: 0.85rem;
+}
+.cronograma-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #f7f8fb;
+    color: #1B2342;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    border-top: none;
+    border-bottom: 2px solid #e3e6f0;
+    padding: 10px 14px;
+    white-space: nowrap;
+}
+.cronograma-table tbody td {
+    padding: 9px 14px;
+    vertical-align: middle;
+    border-color: #f0f2f5;
+    color: #444;
+}
+.cronograma-table tbody tr:hover td { background: #f7f8fb; }
+
+.escritura-row td { background: #fff4ec !important; font-weight: 600; }
+.escritura-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #C05C20;
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+}
+.pct-label { font-size: 0.76rem; font-weight: 600; color: #ccc; }
+.pct-label.pct-ok { color: #C05C20; }
+.crono-concepto-inicial { color: #1B2342; font-weight: 600; }
+.crono-concepto-fin { color: #666; }
+
+.cronograma-footer {
+    padding: 16px 24px;
+    background: #f7f8fb;
+    border-top: 1px solid #e3e6f0;
+}
+.cronograma-footer p {
+    margin: 0;
+    font-size: 0.81rem;
+    color: #777;
+    line-height: 1.65;
+}
+.cronograma-footer strong { color: #C05C20; }
