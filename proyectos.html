@@ -1,10 +1,9 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-CO">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Proyectos de Loteo | El Cóndor</title>
     <meta name="description" content="Urbanizaciones, condominios y lotes campestres en Flandes, Tolima. Precios desde $32 millones con financiación directa hasta 36 meses sin intereses.">
     <meta name="robots" content="index, follow">
@@ -29,7 +28,9 @@
       }
     }
     </script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i%7CRajdhani:400,600,700" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i%7CRajdhani:400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/loader/loaders.css">
     <link rel="stylesheet" href="assets/css/font-awesome/font-awesome.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -75,8 +76,8 @@
                     <div class="pf-chips">
                         <label class="filtro-chip"><input type="radio" name="ft" value="" checked><span>Todos</span></label>
                         <label class="filtro-chip"><input type="radio" name="ft" value="urbanizacion"><span>Urbanización</span></label>
+                        <label class="filtro-chip"><input type="radio" name="ft" value="conjunto"><span>Conjunto</span></label>
                         <label class="filtro-chip"><input type="radio" name="ft" value="condominio"><span>Condominio</span></label>
-                        <label class="filtro-chip"><input type="radio" name="ft" value="condominio-campestre"><span>Condominio campestre</span></label>
                     </div>
                 </div>
 
@@ -111,144 +112,12 @@
     <section class="proyectos-lista">
         <div class="container">
 
-            <div class="row" id="proyectos-grid">
+            <div class="row" id="proyectos-grid"></div>
 
-                <!-- La Esmeralda -->
-                <div class="col-md-6 col-lg-4 mb-4 proyecto-card"
-                    data-tipo="urbanizacion" data-precio-cat="economico" data-area-cat="compacto">
-                    <div class="proy-card">
-                        <div class="proy-card-header">
-                            <img src="assets/images/logolaesmeralda.jpg" alt="La Esmeralda">
-                            <span class="proy-type-badge">Urbanización</span>
-                        </div>
-                        <div class="proy-card-body">
-                            <h5>La Esmeralda</h5>
-                            <p class="proy-ubicacion"><i class="fa fa-map-marker"></i> Flandes, Tolima</p>
-                            <p class="proy-desc">Lotes de 72 m² con valorización garantizada cerca al Río Magdalena. Ideal para invertir y construir.</p>
-                            <ul class="proy-specs">
-                                <li><i class="fa fa-tag"></i><span><strong>Desde</strong> $38.000.000</span></li>
-                                <li><i class="fa fa-expand"></i><span><strong>Área</strong> 72 m²</span></li>
-                                <li><i class="fa fa-clock-o"></i><span>Hasta 36 meses sin intereses</span></li>
-                            </ul>
-                        </div>
-                        <div class="proy-card-footer">
-                            <a href="/proyecto?id=esmeralda" class="btn proy-btn">
-                                Ver proyecto <i class="fa fa-arrow-right ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- La Esmeralda Luxury -->
-                <div class="col-md-6 col-lg-4 mb-4 proyecto-card"
-                    data-tipo="condominio" data-precio-cat="premium" data-area-cat="mediano">
-                    <div class="proy-card proy-card-luxury">
-                        <div class="proy-card-header">
-                            <img src="assets/images/logoesmeraldaluxury.jpeg" alt="La Esmeralda Luxury">
-                            <span class="proy-type-badge proy-badge-luxury">Condominio</span>
-                        </div>
-                        <div class="proy-card-body">
-                            <h5>La Esmeralda Luxury</h5>
-                            <p class="proy-ubicacion"><i class="fa fa-map-marker"></i> Flandes, Tolima</p>
-                            <p class="proy-desc">Exclusividad y seguridad en lotes amplios dentro de un conjunto cerrado con todos los servicios.</p>
-                            <ul class="proy-specs">
-                                <li><i class="fa fa-expand"></i><span><strong>Área</strong> Desde 102 m²</span></li>
-                                <li><i class="fa fa-lock"></i><span>Conjunto privado cerrado</span></li>
-                                <li><i class="fa fa-clock-o"></i><span>Facilidades de pago</span></li>
-                            </ul>
-                        </div>
-                        <div class="proy-card-footer">
-                            <a href="/proyecto?id=esmeralda-luxury" class="btn proy-btn">
-                                Ver proyecto <i class="fa fa-arrow-right ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Puerta de Oro -->
-                <div class="col-md-6 col-lg-4 mb-4 proyecto-card"
-                    data-tipo="condominio-campestre" data-precio-cat="premium" data-area-cat="grande">
-                    <div class="proy-card proy-card-luxury">
-                        <div class="proy-card-header">
-                            <img src="assets/images/logopuertadeoro.jpeg" alt="Puerta de Oro">
-                            <span class="proy-type-badge proy-badge-luxury">Condominio campestre</span>
-                        </div>
-                        <div class="proy-card-body">
-                            <h5>Puerta de Oro</h5>
-                            <p class="proy-ubicacion"><i class="fa fa-map-marker"></i> Flandes, Tolima</p>
-                            <p class="proy-desc">Grandes lotes campestres con servicios básicos en un entorno natural privilegiado cerca al río.</p>
-                            <ul class="proy-specs">
-                                <li><i class="fa fa-expand"></i><span><strong>Área</strong> Desde 500 m²</span></li>
-                                <li><i class="fa fa-tint"></i><span>Agua, energía, alcantarillado</span></li>
-                                <li><i class="fa fa-clock-o"></i><span>Facilidades de pago</span></li>
-                            </ul>
-                        </div>
-                        <div class="proy-card-footer">
-                            <a href="/proyecto?id=puerta-de-oro" class="btn proy-btn">
-                                Ver proyecto <i class="fa fa-arrow-right ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Topacio -->
-                <div class="col-md-6 col-lg-4 mb-4 proyecto-card"
-                    data-tipo="urbanizacion" data-precio-cat="economico" data-area-cat="compacto">
-                    <div class="proy-card">
-                        <div class="proy-card-header">
-                            <img src="assets/images/logotopacio.jpg" alt="Topacio">
-                            <span class="proy-type-badge">Urbanización</span>
-                        </div>
-                        <div class="proy-card-body">
-                            <h5>Topacio</h5>
-                            <p class="proy-ubicacion"><i class="fa fa-map-marker"></i> Flandes, Tolima</p>
-                            <p class="proy-desc">El punto de entrada ideal para invertir en el Tolima. Precios accesibles con alta proyección de valorización.</p>
-                            <ul class="proy-specs">
-                                <li><i class="fa fa-tag"></i><span><strong>Desde</strong> $32.000.000</span></li>
-                                <li><i class="fa fa-expand"></i><span><strong>Área</strong> 72 m²</span></li>
-                                <li><i class="fa fa-clock-o"></i><span>Hasta 36 meses sin intereses</span></li>
-                            </ul>
-                        </div>
-                        <div class="proy-card-footer">
-                            <a href="/proyecto?id=topacio" class="btn proy-btn">
-                                Ver proyecto <i class="fa fa-arrow-right ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Topacio Luxury -->
-                <div class="col-md-6 col-lg-4 mb-4 proyecto-card"
-                    data-tipo="condominio" data-precio-cat="premium" data-area-cat="mediano">
-                    <div class="proy-card proy-card-luxury">
-                        <div class="proy-card-header">
-                            <img src="assets/images/logotopacioluxury.jpeg" alt="Topacio Luxury">
-                            <span class="proy-type-badge proy-badge-luxury">Condominio</span>
-                        </div>
-                        <div class="proy-card-body">
-                            <h5>Topacio Luxury</h5>
-                            <p class="proy-ubicacion"><i class="fa fa-map-marker"></i> Flandes, Tolima</p>
-                            <p class="proy-desc">Condominio cerrado de alto estándar en una de las zonas de mayor desarrollo e inversión del Tolima.</p>
-                            <ul class="proy-specs">
-                                <li><i class="fa fa-expand"></i><span><strong>Área</strong> Desde 98 m²</span></li>
-                                <li><i class="fa fa-lock"></i><span>Condominio cerrado</span></li>
-                                <li><i class="fa fa-clock-o"></i><span>Facilidades de pago</span></li>
-                            </ul>
-                        </div>
-                        <div class="proy-card-footer">
-                            <a href="/proyecto?id=topacio-luxury" class="btn proy-btn">
-                                Ver proyecto <i class="fa fa-arrow-right ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div id="mensaje-sin-resultados" class="text-center mt-4 py-5" style="display:none;">
-                <i class="fa fa-search fa-3x mb-3" style="color:#ddd;"></i>
-                <h5 style="color:#999;">No hay proyectos con esos filtros</h5>
-                <p style="color:#bbb;">Intenta cambiar los criterios de búsqueda.</p>
+            <div id="mensaje-sin-resultados" class="estado-vacio text-center mt-4 py-5" style="display:none;">
+                <i class="fa fa-search fa-3x mb-3"></i>
+                <h5>No hay proyectos con esos filtros</h5>
+                <p>Intenta cambiar los criterios de búsqueda.</p>
             </div>
 
         </div>
@@ -298,68 +167,11 @@
 
     <script src="assets/js/jquery-3.3.1.js"></script>
     <script src="assets/js/bootstrap.bundle.js"></script>
-    <script src="assets/js/loaders.css.js"></script>
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/proyectos.js"></script>
 
-    <script>
-    (function () {
-        var proyectos  = Array.from(document.querySelectorAll(".proyecto-card"));
-        var mensaje    = document.getElementById("mensaje-sin-resultados");
-        var btnLimpiar = document.getElementById("btn-limpiar");
-
-        function getVal(name) {
-            var r = document.querySelector('input[name="' + name + '"]:checked');
-            return r ? r.value : "";
-        }
-
-        function filtrar() {
-            var tipo   = getVal("ft");
-            var precio = getVal("fp");
-            var area   = getVal("fa");
-            var visibles = 0;
-
-            proyectos.forEach(function (p) {
-                var okTipo   = !tipo   || p.getAttribute("data-tipo")       === tipo;
-                var okPrecio = !precio || p.getAttribute("data-precio-cat") === precio;
-                var okArea   = !area   || p.getAttribute("data-area-cat")   === area;
-                var mostrar  = okTipo && okPrecio && okArea;
-
-                if (mostrar) {
-                    p.classList.remove("d-none");
-                    visibles++;
-                } else {
-                    p.classList.add("d-none");
-                }
-            });
-
-            mensaje.style.display = visibles === 0 ? "block" : "none";
-        }
-
-        Array.from(document.querySelectorAll('input[name="ft"], input[name="fp"], input[name="fa"]')).forEach(function (inp) {
-            inp.addEventListener("change", filtrar);
-        });
-
-        btnLimpiar.addEventListener("click", function () {
-            Array.from(document.querySelectorAll('input[name="ft"][value=""], input[name="fp"][value=""], input[name="fa"][value=""]')).forEach(function (inp) {
-                inp.checked = true;
-            });
-            filtrar();
-        });
-    })();
-    </script>
-
-    <script>
-    fetch("partials/header.html")
-        .then(r => r.text())
-        .then(html => { document.getElementById("header").innerHTML = html; })
-        .catch(console.error);
-
-    fetch("partials/footer.html")
-        .then(r => r.text())
-        .then(html => { document.getElementById("footer").innerHTML = html; })
-        .catch(console.error);
-    </script>
+    <script src="assets/js/partials.js"></script>
 
 </body>
 </html>
