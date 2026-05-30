@@ -6,7 +6,7 @@
     "ciudad": "Flandes",
     "departamento": "Tolima",
     "tipo": "urbanizacion",
-    "logo": "assets/images/logolaesmeralda.jpg",
+    "logo": "assets/images/boton-esmeralda.jpg.jpeg",
     "descripcion": "Urbanización abierta con lotes de 72 m² en Flandes, Tolima, cerca al Río Magdalena. Alta valorización, servicios básicos y facilidad de pago directa sin intereses.",
     "ubicacion": "Flandes, Tolima",
     "ubicacionTexto": "Estratégicamente ubicado en Flandes, Tolima, con fácil acceso vial desde Bogotá y Girardot. Zona de alto crecimiento inmobiliario.",
@@ -37,7 +37,7 @@
     "ciudad": "Flandes",
     "departamento": "Tolima",
     "tipo": "conjunto",
-    "logo": "assets/images/logoesmeraldaluxury.jpeg",
+    "logo": "assets/images/boton-esmeralda-luxury.jpg.jpeg",
     "descripcion": "Conjunto privado cerrado con lotes desde 102 m² en Flandes, Tolima. Exclusividad, seguridad y valorización garantizada en una de las zonas de mayor desarrollo del país.",
     "ubicacion": "Flandes, Tolima",
     "ubicacionTexto": "Ubicado en Flandes, Tolima, en zona residencial con acceso controlado, vías internas pavimentadas y todos los servicios.",
@@ -51,7 +51,33 @@
     "areaCat": "mediano",
     "caracteristicas": ["Conjunto privado", "Portería 24h", "Vías internas", "Financiación directa"],
     "imagenes": [
-      "assets/images/logoesmeraldaluxury.jpeg"
+      "assets/images/boton-esmeralda-luxury.jpg.jpeg"
+    ],
+    "pdfPrecios": null
+  },
+
+  {
+    "id": 6,
+    "slug": "bosques-de-alejandria",
+    "nombre": "Bosques de Alejandría",
+    "ciudad": "Flandes",
+    "departamento": "Tolima",
+    "tipo": "urbanizacion",
+    "logo": "assets/images/boton-bosques.jpg.jpeg",
+    "descripcion": "Proyecto de loteo en Flandes, Tolima, con financiación directa sin intereses. Consulta disponibilidad, áreas y precios con un asesor.",
+    "ubicacion": "Flandes, Tolima",
+    "ubicacionTexto": "Ubicado en Flandes, Tolima, zona de alta valorización con buena conectividad vial.",
+    "mapa": "https://www.google.com/maps?q=Flandes+Tolima&output=embed",
+    "lat": 4.2912,
+    "lng": -74.8165,
+    "precioDesde": null,
+    "precioTexto": "Consultar",
+    "area": "Consultar",
+    "precioCat": "economico",
+    "areaCat": "compacto",
+    "caracteristicas": ["Financiación directa", "Sin intereses", "Servicios básicos"],
+    "imagenes": [
+      "assets/images/boton-bosques.jpg.jpeg"
     ],
     "pdfPrecios": null
   },
@@ -63,7 +89,7 @@
     "ciudad": "Flandes",
     "departamento": "Tolima",
     "tipo": "urbanizacion",
-    "logo": "assets/images/logotopacio.jpg",
+    "logo": "assets/images/boton-esmeralda-topacio.jpg.jpeg",
     "descripcion": "Urbanización en Flandes, Tolima. Lotes de 72 m² desde $32.000.000 con financiación directa, sin bancos y sin intereses. El punto de entrada ideal para tu primera inversión.",
     "ubicacion": "Flandes, Tolima",
     "ubicacionTexto": "En el municipio de Flandes, Tolima, con excelente conectividad y proyección de valorización a corto y mediano plazo.",
@@ -77,7 +103,7 @@
     "areaCat": "compacto",
     "caracteristicas": ["Urbanización abierta", "Precio accesible", "Sin intereses", "Financiación hasta 36 meses"],
     "imagenes": [
-      "assets/images/logotopacio.jpg"
+      "assets/images/boton-esmeralda-topacio.jpg.jpeg"
     ],
     "pdfPrecios": "assets/pdf/tabla-valores-urbanizacion-topacio.pdf"
   },
@@ -89,7 +115,7 @@
     "ciudad": "Flandes",
     "departamento": "Tolima",
     "tipo": "condominio",
-    "logo": "assets/images/logotopacioluxury.jpeg",
+    "logo": "assets/images/boton-esmeralda-topacio-luxury.jpg.jpeg",
     "descripcion": "Condominio cerrado de alto estándar en Flandes, Tolima. Lotes desde 98 m² con portería, zonas comunes y toda la documentación legal al día.",
     "ubicacion": "Flandes, Tolima",
     "ubicacionTexto": "Condominio residencial en zona exclusiva de Flandes, Tolima, con alta proyección de valorización y seguridad permanente.",
@@ -103,7 +129,7 @@
     "areaCat": "mediano",
     "caracteristicas": ["Condominio cerrado", "Zonas comunes", "Portería 24h", "Financiación directa"],
     "imagenes": [
-      "assets/images/logotopacioluxury.jpeg"
+      "assets/images/boton-esmeralda-topacio-luxury.jpg.jpeg"
     ],
     "pdfPrecios": "assets/pdf/tabla-valores-condominio-topacio-luxury.pdf"
   },
@@ -115,7 +141,7 @@
     "ciudad": "Flandes",
     "departamento": "Tolima",
     "tipo": "condominio",
-    "logo": "assets/images/logopuertadeoro.jpeg",
+    "logo": "assets/images/boton-puerta-de-oro.jpg.jpeg",
     "descripcion": "Condominio campestre con grandes lotes desde 500 m² en Flandes, Tolima. Servicios de agua, energía y alcantarillado. Entorno natural privilegiado a minutos del Río Magdalena.",
     "ubicacion": "Flandes, Tolima",
     "ubicacionTexto": "Ubicado en las afueras de Flandes, Tolima, en un entorno campestre con naturaleza, tranquilidad y alta valorización a largo plazo.",
@@ -129,7 +155,59 @@
     "areaCat": "grande",
     "caracteristicas": ["Condominio campestre", "Agua y energía", "Alcantarillado", "Lotes grandes"],
     "imagenes": [
-      "assets/images/logopuertadeoro.jpeg"
+      "assets/images/boton-puerta-de-oro.jpg.jpeg"
+    ],
+    "pdfPrecios": null
+  },
+
+  {
+    "id": 7,
+    "slug": "quintas-de-nilo",
+    "nombre": "Quintas de Nilo",
+    "ciudad": "Nilo",
+    "departamento": "Cundinamarca",
+    "tipo": "condominio",
+    "logo": "assets/images/boton-quintas.jpg.jpeg",
+    "descripcion": "Proyecto campestre de loteo en Nilo, Cundinamarca, con financiación directa sin intereses. Consulta disponibilidad, áreas y precios con un asesor.",
+    "ubicacion": "Nilo, Cundinamarca",
+    "ubicacionTexto": "Ubicado en Nilo, Cundinamarca, entorno campestre cercano a Girardot con alta proyección de valorización.",
+    "mapa": "https://www.google.com/maps?q=Nilo+Cundinamarca&output=embed",
+    "lat": 4.3060,
+    "lng": -74.6210,
+    "precioDesde": null,
+    "precioTexto": "Consultar",
+    "area": "Consultar",
+    "precioCat": "premium",
+    "areaCat": "grande",
+    "caracteristicas": ["Entorno campestre", "Financiación directa", "Sin intereses"],
+    "imagenes": [
+      "assets/images/boton-quintas.jpg.jpeg"
+    ],
+    "pdfPrecios": null
+  },
+
+  {
+    "id": 8,
+    "slug": "terrazas-de-alejandria-ii",
+    "nombre": "Terrazas de Alejandría II Etapa",
+    "ciudad": "Flandes",
+    "departamento": "Tolima",
+    "tipo": "urbanizacion",
+    "logo": "assets/images/boton-terrazas.jpg.jpeg",
+    "descripcion": "Segunda etapa del proyecto de loteo Terrazas de Alejandría en Flandes, Tolima, con financiación directa sin intereses. Consulta disponibilidad, áreas y precios con un asesor.",
+    "ubicacion": "Flandes, Tolima",
+    "ubicacionTexto": "Ubicado en Flandes, Tolima, zona de alta valorización con buena conectividad vial.",
+    "mapa": "https://www.google.com/maps?q=Flandes+Tolima&output=embed",
+    "lat": 4.2912,
+    "lng": -74.8165,
+    "precioDesde": null,
+    "precioTexto": "Consultar",
+    "area": "Consultar",
+    "precioCat": "economico",
+    "areaCat": "compacto",
+    "caracteristicas": ["Financiación directa", "Sin intereses", "Servicios básicos"],
+    "imagenes": [
+      "assets/images/boton-terrazas.jpg.jpeg"
     ],
     "pdfPrecios": null
   }
