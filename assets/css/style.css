@@ -4,22 +4,25 @@
 ================================================================
    1.  HEADER / NAV
    2.  HERO
-   3.  BOTONES
-   4.  SECCIÓN TÍTULOS
-   5.  SERVICES
-   6.  PROYECTOS (media list)
-   7.  FEATURED
-   8.  CTA
-   9.  TESTIMONIOS
-   10. FOOTER SIMPLE
-   11. VALORIZACIÓN
-   12. PROCESO DE COMPRA
-   13. SIMULADOR
-   14. VIDEOS VIRALES
-   15. GALERÍA DEL PROYECTO
-   16. FILTROS DE PRECIOS
-   17. STREET VIEW
+   3.  BARRA DE ESTADÍSTICAS
+   4.  BOTÓN FLOTANTE WHATSAPP
+   5.  BOTONES
+   6.  TÍTULOS DE SECCIÓN
+   7.  SERVICES
+   8.  PROYECTOS (lista en index)
+   9.  FEATURED
+   10. TESTIMONIOS
+   11. FOOTER
+   12. EMPRESA (página)
+   13. PROYECTOS (página: tarjetas + filtros)
+   14. SIMULADOR (inline + página)
+   15. FORMULARIO DE LEADS
+   16. GALERÍA DEL PROYECTO
+   17. FILTROS (chips de proyectos)
    18. FORMULARIOS
+   19. PROYECTO (detalle)
+   20. CONTACTO
+   21. SIMULADOR — CRONOGRAMA
 ================================================================ */
 
 
@@ -104,27 +107,6 @@ body {
     opacity: 0;
     pointer-events: none;
     transform: translateX(-50%) translateY(-24px);
-}
-
-.main-header::after {
-    display: none;
-}
-
-.main-header .top-header {
-    padding: 2px 0;
-}
-
-.main-header .contact a {
-    font-size: 12px;
-    line-height: 1;
-    margin-right: 14px;
-    padding: 0;
-    color: #fff;
-}
-
-.main-header .contact a:hover {
-    color: rgba(255, 255, 255, 0.6);
-    text-decoration: none;
 }
 
 .main-header .navbar {
@@ -376,9 +358,9 @@ body {
     margin-bottom: 36px;
     line-height: 1.65;
     text-shadow:
-        0  2px 4px  rgba(0,0,0,1),
-        0  0   12px rgba(0,0,0,0.95),
-        0  0   30px rgba(0,0,0,0.8);
+        0 2px 4px  rgba(0, 0, 0, 1),
+        0 0   12px rgba(0, 0, 0, 0.95),
+        0 0   30px rgba(0, 0, 0, 0.8);
 }
 
 .btn-hero-wa {
@@ -442,7 +424,7 @@ body {
 
 
 /* ----------------------------------------------------------------
-   2b. BARRA DE ESTADÍSTICAS
+   3. BARRA DE ESTADÍSTICAS
 ---------------------------------------------------------------- */
 
 .stats-bar {
@@ -482,7 +464,7 @@ body {
 
 
 /* ----------------------------------------------------------------
-   2c. BOTÓN FLOTANTE WHATSAPP
+   4. BOTÓN FLOTANTE WHATSAPP
 ---------------------------------------------------------------- */
 
 .whatsapp-float {
@@ -513,7 +495,7 @@ body {
 
 
 /* ----------------------------------------------------------------
-   3. BOTONES
+   5. BOTONES
 ---------------------------------------------------------------- */
 
 .btn-primary {
@@ -560,7 +542,7 @@ body {
 
 
 /* ----------------------------------------------------------------
-   4. SECCIÓN TÍTULOS
+   6. TÍTULOS DE SECCIÓN
 ---------------------------------------------------------------- */
 
 .title {
@@ -568,7 +550,6 @@ body {
     text-transform: uppercase;
 }
 
-.title h6,
 .title .eyebrow {
     letter-spacing: 4px;
     margin-bottom: 20px;
@@ -582,13 +563,9 @@ body {
     color: #1B2342;
 }
 
-.title-primary {
-    color: #C05C20;
-}
-
 
 /* ----------------------------------------------------------------
-   5. SERVICES
+   7. SERVICES
 ---------------------------------------------------------------- */
 
 .services {
@@ -610,22 +587,9 @@ body {
     margin-bottom: 10px;
 }
 
-.service-box {
-    padding: 30px 20px;
-}
-
-.service-box i {
-    color: #C05C20;
-}
-
-.service-box h5 {
-    color: #1B2342;
-    margin-top: 15px;
-}
-
 
 /* ----------------------------------------------------------------
-   6. PROYECTOS (media list en index)
+   8. PROYECTOS (lista media en index)
 ---------------------------------------------------------------- */
 
 .proyectos .media img {
@@ -674,7 +638,7 @@ body {
 
 
 /* ----------------------------------------------------------------
-   7. FEATURED
+   9. FEATURED
 ---------------------------------------------------------------- */
 
 .featured {
@@ -687,92 +651,9 @@ body {
     margin: 35px 0 53px;
 }
 
-.featured .media i {
-    font-size: 24px;
-    color: #C05C20;
-}
-
-.featured .media h5 {
-    text-transform: uppercase;
-    color: #1B2342;
-}
-
-.featured .btn {
-    margin-top: 80px;
-}
-
-.featured-img {
-    position: relative;
-    height: 480px;
-    width: 100%;
-}
-
-.featured-big {
-    position: absolute;
-    right: 0;
-    top: -280px;
-    width: 85%;
-    max-width: 520px;
-    height: auto;
-    border-radius: 16px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-}
-
-.featured-small {
-    position: absolute;
-    left: 0;
-    top: 220px;
-    width: 60%;
-    max-width: 340px;
-    height: auto;
-    background: #fff;
-    padding: 10px;
-    border-radius: 14px;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
-}
-
 
 /* ----------------------------------------------------------------
-   8. CTA
----------------------------------------------------------------- */
-
-.cta {
-    margin-top: 40px;
-}
-
-.cta-content {
-    padding: 30px 0 90px;
-    color: #fff;
-    background-color: #C05C20;
-    position: relative;
-    z-index: 1;
-}
-
-.cta-content::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgba(27, 35, 66, 0.77);
-    position: absolute;
-    top: 0;
-    left: -1px;
-    z-index: -1;
-    transition: all 0.2s ease-in-out;
-}
-
-.cta-content .subscribe-btn {
-    align-self: flex-end;
-    margin-right: 30px;
-}
-
-.cta-content h2,
-.cta-content p {
-    color: #fff;
-}
-
-
-/* ----------------------------------------------------------------
-   9. TESTIMONIOS
+   10. TESTIMONIOS
 ---------------------------------------------------------------- */
 
 .testimonial-and-clients {
@@ -791,7 +672,6 @@ body {
     max-width: 680px;
 }
 
-.testimonial-and-clients .title h6,
 .testimonial-and-clients .title .eyebrow {
     color: #C05C20;
     font-weight: 700;
@@ -975,7 +855,7 @@ body {
 
 
 /* ----------------------------------------------------------------
-   10. FOOTER SIMPLE
+   11. FOOTER
 ---------------------------------------------------------------- */
 
 .footer-rich {
@@ -1091,7 +971,7 @@ body {
 
 
 /* ----------------------------------------------------------------
-   EMPRESA PAGE
+   12. EMPRESA (página)
 ---------------------------------------------------------------- */
 
 .empresa-nit-badge {
@@ -1343,7 +1223,7 @@ body {
 
 
 /* ----------------------------------------------------------------
-   PROYECTOS PAGE
+   13. PROYECTOS (página: tarjetas + filtros)
 ---------------------------------------------------------------- */
 
 /* Filtros bar */
@@ -1403,7 +1283,7 @@ body {
     background: #fff;
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0   4px 20px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -1438,7 +1318,6 @@ body {
 .proy-card-header img {
     width: 350px;
     height: 170px;
-    
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
     position: relative;
     z-index: 1;
@@ -1668,70 +1547,7 @@ body {
 
 
 /* ----------------------------------------------------------------
-   11. VALORIZACIÓN
----------------------------------------------------------------- */
-
-.valorizacion {
-    padding: 100px 0;
-    background: #f9f9f9;
-}
-
-.valorizacion canvas {
-    width: 100%;
-    height: 420px;
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 20px;
-}
-
-
-/* ----------------------------------------------------------------
-   12. PROCESO DE COMPRA
----------------------------------------------------------------- */
-
-.proceso-compra {
-    padding: 80px 0;
-}
-
-.proceso-item {
-    padding: 28px 30px;
-    border-left: 4px solid #C05C20;
-    border-radius: 0 8px 8px 0;
-    background: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    height: 100%;
-}
-
-.proceso-item h4 {
-    color: #1B2342;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-
-
-/* ----------------------------------------------------------------
-   13. SIMULADOR
----------------------------------------------------------------- */
-
-.simulador-pagos input,
-.simulador-pagos select {
-    color: #000 !important;
-}
-
-.simulador-pagos input::placeholder {
-    color: #666;
-}
-
-.simulador-resultado,
-.simulador-resultado p,
-.simulador-resultado span,
-.simulador-resultado strong {
-    color: #000 !important;
-}
-
-
-/* ----------------------------------------------------------------
-   13b. SIMULADOR INLINE
+   14. SIMULADOR (inline + página)
 ---------------------------------------------------------------- */
 
 .simulador-inline {
@@ -1756,10 +1572,6 @@ body {
     color: #1B2342;
     margin-bottom: 10px;
     display: block;
-}
-
-.sim-pct-val {
-    color: #C05C20;
 }
 
 .sim-prefix {
@@ -1826,89 +1638,6 @@ body {
     background: rgba(192, 92, 32, 0.06);
     border-radius: 10px;
     border: 1.5px solid rgba(192, 92, 32, 0.2);
-}
-
-/* Range slider */
-.sim-range {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 6px;
-    border-radius: 4px;
-    outline: none;
-    cursor: pointer;
-    margin: 8px 0 4px;
-}
-
-.sim-range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: #C05C20;
-    box-shadow: 0 2px 8px rgba(192, 92, 32, 0.45);
-    cursor: pointer;
-    transition: transform 0.15s ease;
-}
-
-.sim-range::-webkit-slider-thumb:hover {
-    transform: scale(1.2);
-}
-
-.sim-range::-moz-range-thumb {
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: #C05C20;
-    border: none;
-    cursor: pointer;
-}
-
-.sim-range-labels {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.75rem;
-    color: #999;
-}
-
-/* Plazo chips */
-.sim-plazo-chips {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
-.sim-chip {
-    cursor: pointer;
-    margin: 0;
-}
-
-.sim-chip input {
-    display: none;
-}
-
-.sim-chip span {
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 25px;
-    border: 2px solid #e0e0e0;
-    font-family: "Rajdhani", sans-serif;
-    font-weight: 700;
-    font-size: 0.85rem;
-    color: #666;
-    transition: all 0.2s ease;
-    user-select: none;
-}
-
-.sim-chip:hover span {
-    border-color: #C05C20;
-    color: #C05C20;
-}
-
-.sim-chip input:checked + span {
-    background: #C05C20;
-    border-color: #C05C20;
-    color: #fff;
-    box-shadow: 0 3px 10px rgba(192, 92, 32, 0.35);
 }
 
 /* Results panel */
@@ -2032,7 +1761,7 @@ body {
 
 
 /* ----------------------------------------------------------------
-   14. FORMULARIO DE LEADS (Contacto rápido)
+   15. FORMULARIO DE LEADS (contacto rápido)
 ---------------------------------------------------------------- */
 
 .contacto-leads {
@@ -2040,7 +1769,6 @@ body {
     padding: 80px 0;
 }
 
-.leads-info h6,
 .leads-info .eyebrow {
     color: #C05C20;
     letter-spacing: 3px;
@@ -2121,7 +1849,7 @@ body {
 
 
 /* ----------------------------------------------------------------
-   15. GALERÍA DEL PROYECTO
+   16. GALERÍA DEL PROYECTO
 ---------------------------------------------------------------- */
 
 .proyecto-galeria {
@@ -2200,21 +1928,8 @@ body {
 
 
 /* ----------------------------------------------------------------
-   16. FILTROS DE PRECIOS
+   17. FILTROS (chips de proyectos)
 ---------------------------------------------------------------- */
-
-.filtro-lotes-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 18px;
-    flex-wrap: wrap;
-}
-
-.filtro-label {
-    font-weight: 500;
-    color: #555;
-}
 
 .filtro-chip {
     position: relative;
@@ -2264,28 +1979,6 @@ body {
 
 
 /* ----------------------------------------------------------------
-   17. STREET VIEW
----------------------------------------------------------------- */
-
-.street-view-wrapper {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.street-view-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
-/* ----------------------------------------------------------------
    18. FORMULARIOS
 ---------------------------------------------------------------- */
 
@@ -2300,7 +1993,7 @@ body {
 
 
 /* ----------------------------------------------------------------
-   19. PROYECTO DETAIL
+   19. PROYECTO (detalle)
 ---------------------------------------------------------------- */
 
 /* Tipo badge (hero) */
@@ -2472,8 +2165,15 @@ body {
     line-height: 1.45;
 }
 
-/* ===== Página de contacto ===== */
-.contacto-section { background: #f7f8fb; padding: 80px 0; }
+
+/* ----------------------------------------------------------------
+   20. CONTACTO
+---------------------------------------------------------------- */
+
+.contacto-section {
+    background: #f7f8fb;
+    padding: 80px 0;
+}
 
 .ct-card {
     border-radius: 12px;
@@ -2485,6 +2185,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .ct-card-header {
     background: #1B2342;
     padding: 18px 24px;
@@ -2493,19 +2194,28 @@ body {
     gap: 12px;
     flex-shrink: 0;
 }
-.ct-card-header i { color: #C05C20; font-size: 1.15rem; }
+
+.ct-card-header i {
+    color: #C05C20;
+    font-size: 1.15rem;
+}
+
 .ct-card-header h5 {
     color: #fff;
     margin: 0;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: "Rajdhani", sans-serif;
     font-size: 1.05rem;
     font-weight: 700;
     letter-spacing: 0.4px;
 }
-.ct-card-body { padding: 24px; flex: 1; }
+
+.ct-card-body {
+    padding: 24px;
+    flex: 1;
+}
 
 .ct-info-label {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: "Rajdhani", sans-serif;
     font-size: 0.70rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -2513,21 +2223,29 @@ body {
     color: #1B2342;
     margin-bottom: 5px;
 }
+
 .ct-info-value {
     font-size: 0.91rem;
     color: #555;
     margin-bottom: 18px;
     line-height: 1.7;
 }
+
 .ct-info-value a {
     color: #C05C20;
     text-decoration: none;
     font-weight: 600;
     display: inline-block;
 }
-.ct-info-value a:hover { text-decoration: underline; }
 
-.ct-divider { border-color: #e3e6f0; margin: 20px 0; }
+.ct-info-value a:hover {
+    text-decoration: underline;
+}
+
+.ct-divider {
+    border-color: #e3e6f0;
+    margin: 20px 0;
+}
 
 .ct-btn-wa {
     background: #25D366;
@@ -2535,7 +2253,7 @@ body {
     border: none;
     border-radius: 8px;
     padding: 11px 18px;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: "Rajdhani", sans-serif;
     font-size: 0.97rem;
     font-weight: 700;
     display: flex;
@@ -2546,10 +2264,15 @@ body {
     text-decoration: none;
     transition: background 0.2s;
 }
-.ct-btn-wa:hover { background: #1ebe5d; color: #fff; text-decoration: none; }
+
+.ct-btn-wa:hover {
+    background: #1ebe5d;
+    color: #fff;
+    text-decoration: none;
+}
 
 .ct-form-label {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: "Rajdhani", sans-serif;
     font-size: 0.70rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -2557,6 +2280,7 @@ body {
     color: #1B2342;
     margin-bottom: 6px;
 }
+
 .ct-form-control {
     border: 1px solid #dde0eb;
     border-radius: 8px;
@@ -2566,6 +2290,7 @@ body {
     background: #fafbff;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
+
 .ct-form-control:focus {
     border-color: #C05C20;
     box-shadow: 0 0 0 3px rgba(192, 92, 32, 0.12);
@@ -2573,12 +2298,28 @@ body {
     background: #fff;
 }
 
-/* ===== Simulador: cronograma de pagos (simulador.html) ===== */
-.simulador-page { background: #f7f8fb; }
 
-.sim-escritura-ico { color: #C05C20; }
-.sim-escritura-val { color: #C05C20; font-size: 0.85rem; font-weight: 700; }
-.sim-nota-ico { color: #999; }
+/* ----------------------------------------------------------------
+   21. SIMULADOR — CRONOGRAMA (simulador.html)
+---------------------------------------------------------------- */
+
+.simulador-page {
+    background: #f7f8fb;
+}
+
+.sim-escritura-ico {
+    color: #C05C20;
+}
+
+.sim-escritura-val {
+    color: #C05C20;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.sim-nota-ico {
+    color: #999;
+}
 
 .cronograma-wrapper {
     margin-top: 48px;
@@ -2587,6 +2328,7 @@ body {
     border: 1px solid #e3e6f0;
     box-shadow: 0 2px 16px rgba(27, 35, 66, 0.08);
 }
+
 .cronograma-header {
     background: #1B2342;
     padding: 18px 24px;
@@ -2594,37 +2336,46 @@ body {
     align-items: center;
     gap: 12px;
 }
-.cronograma-header i { color: #C05C20; font-size: 1.15rem; }
+
+.cronograma-header i {
+    color: #C05C20;
+    font-size: 1.15rem;
+}
+
 .cronograma-header h4 {
     color: #fff;
     margin: 0;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: "Rajdhani", sans-serif;
     font-size: 1.05rem;
     font-weight: 700;
     letter-spacing: 0.4px;
 }
+
 .crono-meta {
     margin-left: auto;
     color: rgba(255, 255, 255, 0.45);
     font-size: 0.76rem;
     white-space: nowrap;
 }
+
 .cronograma-scroll {
     max-height: 420px;
     overflow-y: auto;
     background: #fff;
 }
+
 .cronograma-table {
     margin: 0;
     font-size: 0.85rem;
 }
+
 .cronograma-table thead th {
     position: sticky;
     top: 0;
     z-index: 2;
     background: #f7f8fb;
     color: #1B2342;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: "Rajdhani", sans-serif;
     font-weight: 700;
     font-size: 0.72rem;
     text-transform: uppercase;
@@ -2634,15 +2385,23 @@ body {
     padding: 10px 14px;
     white-space: nowrap;
 }
+
 .cronograma-table tbody td {
     padding: 9px 14px;
     vertical-align: middle;
     border-color: #f0f2f5;
     color: #444;
 }
-.cronograma-table tbody tr:hover td { background: #f7f8fb; }
 
-.escritura-row td { background: #fff4ec !important; font-weight: 600; }
+.cronograma-table tbody tr:hover td {
+    background: #f7f8fb;
+}
+
+.escritura-row td {
+    background: #fff4ec !important;
+    font-weight: 600;
+}
+
 .escritura-badge {
     display: inline-flex;
     align-items: center;
@@ -2656,20 +2415,39 @@ body {
     white-space: nowrap;
     letter-spacing: 0.3px;
 }
-.pct-label { font-size: 0.76rem; font-weight: 600; color: #ccc; }
-.pct-label.pct-ok { color: #C05C20; }
-.crono-concepto-inicial { color: #1B2342; font-weight: 600; }
-.crono-concepto-fin { color: #666; }
+
+.pct-label {
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: #ccc;
+}
+
+.pct-label.pct-ok {
+    color: #C05C20;
+}
+
+.crono-concepto-inicial {
+    color: #1B2342;
+    font-weight: 600;
+}
+
+.crono-concepto-fin {
+    color: #666;
+}
 
 .cronograma-footer {
     padding: 16px 24px;
     background: #f7f8fb;
     border-top: 1px solid #e3e6f0;
 }
+
 .cronograma-footer p {
     margin: 0;
     font-size: 0.81rem;
     color: #777;
     line-height: 1.65;
 }
-.cronograma-footer strong { color: #C05C20; }
+
+.cronograma-footer strong {
+    color: #C05C20;
+}

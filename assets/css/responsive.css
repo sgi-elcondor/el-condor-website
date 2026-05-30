@@ -36,30 +36,6 @@
         left: 0;
     }
 
-    .cta-content {
-        border-top-right-radius: 200px;
-        border-bottom-left-radius: 200px;
-    }
-
-    .cta-content::after {
-        border-top-right-radius: 200px;
-        border-bottom-left-radius: 200px;
-    }
-
-    .cta-content .subscribe-btn {
-        align-self: flex-end;
-        margin-right: 30px;
-    }
-
-    .featured-img {
-        height: 100%;
-        margin-top: -66px;
-    }
-
-    .valorizacion {
-        padding-bottom: 60px;
-    }
-
     .featured {
         padding-top: 60px;
     }
@@ -266,30 +242,7 @@
         right: 16px;
     }
 
-    /* ---- Chart ---- */
-    #graficaValorizacion {
-        width: 100% !important;
-        height: 260px !important;
-    }
-
     /* ---- Featured ---- */
-    .featured-big,
-    .featured-small {
-        position: static;
-        transform: none;
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        margin: 20px 0;
-        display: block;
-        z-index: auto;
-    }
-
-    .featured-img {
-        margin-top: 0;
-        height: auto;
-    }
-
     .featured {
         padding-bottom: 60px;
         padding-top: 40px;
@@ -304,46 +257,6 @@
     .services .media img {
         width: 70px;
         height: 70px;
-    }
-
-    /* ---- CTA ---- */
-    .cta-content {
-        border-radius: 20px;
-        padding: 30px 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .cta-content::after {
-        border-radius: 20px;
-    }
-
-    .cta-content .content,
-    .cta-content .subscribe-btn {
-        width: 100%;
-    }
-
-    .cta-content .subscribe-btn {
-        align-self: center !important;
-        margin-right: 0 !important;
-        text-align: center;
-    }
-
-    .cta-content .btn {
-        display: block !important;
-        width: 100% !important;
-        text-align: center;
-        margin-bottom: 14px;
-    }
-
-    /* ---- Valorización ---- */
-    .valorizacion {
-        padding-bottom: 40px;
-    }
-
-    .valorizacion canvas {
-        height: 280px;
     }
 
     /* ---- Gallery ---- */
@@ -379,11 +292,6 @@
 
     .empresa-cta-final {
         padding: 60px 0;
-    }
-
-    /* ---- Proceso compra ---- */
-    .proceso-item {
-        margin-bottom: 16px;
     }
 
     /* ---- Footer ---- */
@@ -424,16 +332,6 @@
     .stats-bar .row > [class*="col-"] {
         flex: 0 0 100% !important;
         max-width: 100% !important;
-    }
-
-    /* ---- Simulator chips ---- */
-    .sim-plazo-chips {
-        gap: 6px;
-    }
-
-    .sim-chip span {
-        padding: 7px 12px;
-        font-size: 0.8rem;
     }
 
     /* ---- Simulator cards full padding ---- */
