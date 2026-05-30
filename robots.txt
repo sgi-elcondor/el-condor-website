@@ -4,4 +4,4 @@ Disallow: /assets/data/
 Disallow: /output/
 Disallow: /partials/
 
-Sitemap: https://elcondor.com.co/sitemap.xml
+Sitemap: https://somoselcondor.com/sitemap.xml

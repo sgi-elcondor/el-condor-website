@@ -1,122 +1,25 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-CO">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Simulador de Cuotas | El Cóndor S.A.S</title>
     <meta name="description" content="Calcula el plan de pagos para tu lote: cuotas mensuales, cronograma y fecha de escrituras. Sin intereses, sin compromiso.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="El Cóndor S.A.S">
     <meta name="keywords" content="simulador cuotas lote, calcular pago lote Tolima, plan de pagos lote Colombia, cuotas sin intereses lote">
     <meta name="theme-color" content="#1B2342">
-    <link rel="canonical" href="https://elcondor.com.co/simulador.html">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i%7CRajdhani:400,600,700" rel="stylesheet">
+    <link rel="canonical" href="https://somoselcondor.com/simulador">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i%7CRajdhani:400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/loader/loaders.css">
     <link rel="stylesheet" href="assets/css/font-awesome/font-awesome.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/aos/aos.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <style>
-    .simulador-inline { background: #f7f8fb; }
-
-    /* Cronograma de pagos */
-    .cronograma-wrapper {
-        margin-top: 48px;
-        border-radius: 12px;
-        overflow: hidden;
-        border: 1px solid #e3e6f0;
-        box-shadow: 0 2px 16px rgba(27,35,66,0.08);
-    }
-    .cronograma-header {
-        background: #1B2342;
-        padding: 18px 24px;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-    .cronograma-header i { color: #C05C20; font-size: 1.15rem; }
-    .cronograma-header h4 {
-        color: #fff;
-        margin: 0;
-        font-family: 'Rajdhani', sans-serif;
-        font-size: 1.05rem;
-        font-weight: 700;
-        letter-spacing: 0.4px;
-    }
-    .crono-meta {
-        margin-left: auto;
-        color: rgba(255,255,255,0.45);
-        font-size: 0.76rem;
-        white-space: nowrap;
-    }
-    .cronograma-scroll {
-        max-height: 420px;
-        overflow-y: auto;
-        background: #fff;
-    }
-    .cronograma-table {
-        margin: 0;
-        font-size: 0.85rem;
-    }
-    .cronograma-table thead th {
-        position: sticky;
-        top: 0;
-        z-index: 2;
-        background: #f7f8fb;
-        color: #1B2342;
-        font-family: 'Rajdhani', sans-serif;
-        font-weight: 700;
-        font-size: 0.72rem;
-        text-transform: uppercase;
-        letter-spacing: 0.7px;
-        border-top: none;
-        border-bottom: 2px solid #e3e6f0;
-        padding: 10px 14px;
-        white-space: nowrap;
-    }
-    .cronograma-table tbody td {
-        padding: 9px 14px;
-        vertical-align: middle;
-        border-color: #f0f2f5;
-        color: #444;
-    }
-    .cronograma-table tbody tr:hover td { background: #f7f8fb; }
-
-    .escritura-row td { background: #fff4ec !important; font-weight: 600; }
-    .escritura-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        background: #C05C20;
-        color: #fff;
-        font-size: 0.68rem;
-        font-weight: 700;
-        padding: 3px 9px;
-        border-radius: 20px;
-        white-space: nowrap;
-        letter-spacing: 0.3px;
-    }
-    .pct-label { font-size: 0.76rem; font-weight: 600; color: #ccc; }
-    .pct-label.pct-ok { color: #C05C20; }
-    .crono-concepto-inicial { color: #1B2342; font-weight: 600; }
-    .crono-concepto-fin { color: #666; }
-
-    .cronograma-footer {
-        padding: 16px 24px;
-        background: #f7f8fb;
-        border-top: 1px solid #e3e6f0;
-    }
-    .cronograma-footer p {
-        margin: 0;
-        font-size: 0.81rem;
-        color: #777;
-        line-height: 1.65;
-    }
-    .cronograma-footer strong { color: #C05C20; }
-    </style>
 </head>
 
 <body>
@@ -147,11 +50,11 @@
     </section>
 
     <!-- SIMULADOR -->
-    <section class="simulador-inline">
+    <section class="simulador-inline simulador-page">
         <div class="container">
 
             <div class="title text-center mb-5">
-                <h6>Planifica tu inversión</h6>
+                <p class="eyebrow">Planifica tu inversión</p>
                 <h2 class="title-blue">Calcula tus cuotas</h2>
                 <p>Facilidad de pago · Sin intereses · Proceso claro</p>
             </div>
@@ -200,7 +103,7 @@
                             <label class="sim-label sim-opt-tag">
                                 <input type="checkbox" id="sim-permuta-check">
                                 ¿Tienes algo a permutar?
-                                <span class="badge badge-secondary" style="font-size:0.62rem;font-weight:600;">Opcional</span>
+                                <span class="badge badge-secondary sim-opt-badge">Opcional</span>
                             </label>
                             <div class="sim-permuta-fields" id="sim-permuta-fields" style="display:none;">
                                 <input type="text" class="form-control sim-standalone-input mb-2" id="sim-permuta-desc"
@@ -282,10 +185,10 @@
                             </div>
                             <div class="sim-item" id="res-escritura-row" style="display:none;">
                                 <span class="sim-item-label">
-                                    <i class="fa fa-home mr-1" style="color:#C05C20;"></i>
+                                    <i class="fa fa-home mr-1 sim-escritura-ico"></i>
                                     Escrituras disponibles
                                 </span>
-                                <span class="sim-item-value" id="res-escritura" style="color:#C05C20;font-size:0.85rem;font-weight:700;">—</span>
+                                <span class="sim-item-value sim-escritura-val" id="res-escritura">—</span>
                             </div>
                         </div>
                         <p class="sim-nota">Simulación informativa · Sin compromiso contractual</p>
@@ -334,237 +237,10 @@
 
     <script src="assets/js/jquery-3.3.1.js"></script>
     <script src="assets/js/bootstrap.bundle.js"></script>
-    <script src="assets/js/loaders.css.js"></script>
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <script>
-    (function () {
-
-        /* ── helpers ── */
-        function formatCOP(val) {
-            var d = val.replace(/\D/g, "");
-            return d.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-        }
-        function parseCOP(val) {
-            return parseInt((val || "").replace(/\./g, ""), 10) || 0;
-        }
-        function fmt(n) {
-            return "$ " + Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-        }
-        var MESES_CORTO = ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"];
-        var MESES_LARGO = ["enero","febrero","marzo","abril","mayo","junio","julio",
-                           "agosto","septiembre","octubre","noviembre","diciembre"];
-        function fmtCorto(d) { return d.getDate() + " " + MESES_CORTO[d.getMonth()] + " " + d.getFullYear(); }
-        function fmtLargo(d) { return MESES_LARGO[d.getMonth()] + " " + d.getFullYear(); }
-
-        /* ── refs ── */
-        var precioInput    = document.getElementById("sim-precio");
-        var inicialInput   = document.getElementById("sim-inicial");
-        var mesesInput     = document.getElementById("sim-meses");
-        var simBtn         = document.getElementById("sim-btn");
-        var resultado      = document.getElementById("sim-resultado");
-        var permutaCheck   = document.getElementById("sim-permuta-check");
-        var permutaFields  = document.getElementById("sim-permuta-fields");
-        var permutaValor   = document.getElementById("sim-permuta-valor");
-        var nSplitSelect   = document.getElementById("sim-n-split");
-        var diaSelect      = document.getElementById("sim-dia");
-        var cronoWrapper   = document.getElementById("cronograma-wrapper");
-
-        /* ── formato inputs ── */
-        [precioInput, inicialInput, permutaValor].forEach(function (el) {
-            el.addEventListener("input", function () {
-                var pos  = this.selectionStart;
-                var prev = this.value.length;
-                this.value = formatCOP(this.value);
-                var diff = this.value.length - prev;
-                this.setSelectionRange(pos + diff, pos + diff);
-            });
-        });
-
-        mesesInput.addEventListener("input", function () {
-            this.value = this.value.replace(/\D/g, "");
-        });
-
-        permutaCheck.addEventListener("change", function () {
-            permutaFields.style.display = this.checked ? "block" : "none";
-            if (!this.checked) {
-                permutaValor.value = "";
-                document.getElementById("sim-permuta-desc").value = "";
-            }
-        });
-
-        /* ── calcular ── */
-        simBtn.addEventListener("click", function () {
-            var precio  = parseCOP(precioInput.value);
-            var inicial = parseCOP(inicialInput.value);
-            var meses   = parseInt(mesesInput.value) || 0;
-            var permuta = permutaCheck.checked ? parseCOP(permutaValor.value) : 0;
-            var nSplit  = parseInt(nSplitSelect.value) || 1;
-            var dia     = parseInt(diaSelect.value) || 5;
-
-            /* validación */
-            var valid = true;
-            [[precioInput,  !precio || precio <= 0],
-             [inicialInput, !inicial || inicial <= 0 || inicial >= precio],
-             [mesesInput,   !meses || meses <= 0]
-            ].forEach(function (p) {
-                if (p[1]) { p[0].classList.add("is-invalid");    valid = false; }
-                else       { p[0].classList.remove("is-invalid"); }
-            });
-            if (!valid) return;
-
-            var precioAjustado = precio - permuta;
-            var saldo          = Math.max(precioAjustado - inicial, 0);
-            var cuotaMensual   = meses > 0 ? Math.round(saldo / meses) : 0;
-            var cuotaSplit     = nSplit > 1 ? Math.round(inicial / nSplit) : 0;
-            var umbral30       = precio * 0.30;
-
-            /* panel resultado */
-            ["res-precio","res-inicial","res-saldo","res-cuota"].forEach(function (id) {
-                var el = document.getElementById(id);
-                el.classList.remove("sim-val-anim");
-                void el.offsetWidth;
-                el.classList.add("sim-val-anim");
-            });
-
-            document.getElementById("res-precio").textContent  = fmt(precio);
-            document.getElementById("res-inicial").textContent = fmt(inicial);
-            document.getElementById("res-saldo").textContent   = fmt(saldo);
-            document.getElementById("res-cuota").textContent   = fmt(cuotaMensual);
-
-            var splitRow = document.getElementById("res-split-row");
-            if (nSplit > 1) {
-                document.getElementById("res-split").textContent = fmt(cuotaSplit) + " × " + nSplit;
-                splitRow.style.display = "flex";
-            } else {
-                splitRow.style.display = "none";
-            }
-
-            var permutaRow = document.getElementById("res-permuta-row");
-            if (permuta > 0) {
-                document.getElementById("res-permuta").textContent = "– " + fmt(permuta);
-                permutaRow.style.display = "flex";
-            } else {
-                permutaRow.style.display = "none";
-            }
-
-            /* ── cronograma ── */
-            var pagos = [];
-            var acumulado = 0;
-            var escriturasMes = null;
-            var hoy = new Date();
-            var base = new Date(hoy.getFullYear(), hoy.getMonth() + 1, dia);
-
-            function addPago(num, fecha, concepto, monto) {
-                acumulado += monto;
-                var milestone = escriturasMes === null && acumulado >= umbral30;
-                if (milestone) escriturasMes = num;
-                pagos.push({ num: num, fecha: fecha, concepto: concepto,
-                             monto: monto, acumulado: acumulado,
-                             pct: acumulado / precio * 100, milestone: milestone });
-            }
-
-            var n = 1;
-            if (nSplit > 1) {
-                for (var i = 0; i < nSplit; i++) {
-                    addPago(n++,
-                        new Date(base.getFullYear(), base.getMonth() + i, dia),
-                        "Cuota inicial · Pago " + (i + 1) + "/" + nSplit,
-                        cuotaSplit);
-                }
-                for (var j = 0; j < meses; j++) {
-                    addPago(n++,
-                        new Date(base.getFullYear(), base.getMonth() + nSplit + j, dia),
-                        "Facilidad de pago · Cuota " + (j + 1) + "/" + meses,
-                        cuotaMensual);
-                }
-            } else {
-                addPago(n++,
-                    new Date(base.getFullYear(), base.getMonth(), dia),
-                    "Cuota inicial", inicial);
-                for (var k = 0; k < meses; k++) {
-                    addPago(n++,
-                        new Date(base.getFullYear(), base.getMonth() + 1 + k, dia),
-                        "Facilidad de pago · Cuota " + (k + 1) + "/" + meses,
-                        cuotaMensual);
-                }
-            }
-
-            /* render filas */
-            var tbody = document.getElementById("cronograma-body");
-            tbody.innerHTML = "";
-            pagos.forEach(function (p) {
-                var tr = document.createElement("tr");
-                if (p.milestone) tr.className = "escritura-row";
-                var badge = p.milestone
-                    ? '<span class="escritura-badge"><i class="fa fa-home"></i> Escrituras</span>'
-                    : "";
-                var pctClass = p.pct >= 30 ? "pct-label pct-ok" : "pct-label";
-                var esInicial = p.concepto.indexOf("Cuota inicial") === 0;
-                tr.innerHTML =
-                    "<td>" + p.num + "</td>" +
-                    "<td>" + fmtCorto(p.fecha) + "</td>" +
-                    '<td class="' + (esInicial ? "crono-concepto-inicial" : "crono-concepto-fin") + '">' + p.concepto + "</td>" +
-                    '<td class="text-right">' + fmt(p.monto) + "</td>" +
-                    '<td class="text-right">' + fmt(p.acumulado) + "</td>" +
-                    '<td class="text-right"><span class="' + pctClass + '">' + p.pct.toFixed(1) + "%</span></td>" +
-                    "<td>" + badge + "</td>";
-                tbody.appendChild(tr);
-            });
-
-            /* meta y nota */
-            var totalPagos = nSplit > 1 ? (nSplit + meses) : (1 + meses);
-            document.getElementById("crono-meta").textContent = totalPagos + " pagos · desde " + fmtCorto(base);
-
-            var notaEl = document.getElementById("cronograma-nota");
-            if (escriturasMes !== null) {
-                var mesDat = pagos[escriturasMes - 1];
-                notaEl.innerHTML =
-                    '<i class="fa fa-home mr-1" style="color:#C05C20;"></i> ' +
-                    "<strong>Las escrituras del lote se entregan a partir del pago #" + escriturasMes + "</strong>" +
-                    " (" + fmtLargo(mesDat.fecha) + "), cuando el total pagado alcanza el 30% del valor del lote" +
-                    " (" + fmt(umbral30) + ").";
-
-                document.getElementById("res-escritura").textContent =
-                    "Pago #" + escriturasMes + " · " + fmtLargo(mesDat.fecha);
-                document.getElementById("res-escritura-row").style.display = "flex";
-            } else {
-                notaEl.innerHTML =
-                    '<i class="fa fa-info-circle mr-1" style="color:#999;"></i>' +
-                    "El 30% del lote (" + fmt(umbral30) + ") se alcanza al finalizar el plan completo.";
-                document.getElementById("res-escritura-row").style.display = "none";
-            }
-
-            resultado.classList.add("sim-activo");
-            cronoWrapper.style.display = "block";
-            cronoWrapper.scrollIntoView({ behavior: "smooth", block: "start" });
-        });
-
-    })();
-    </script>
-
-    <script>
-    fetch("partials/header.html")
-        .then(r => r.text())
-        .then(html => {
-            document.getElementById("header").innerHTML = html;
-            return fetch("assets/data/empresa.json");
-        })
-        .then(r => r.json())
-        .then(data => {
-            var tel  = document.getElementById("empresa-telefono");
-            var mail = document.getElementById("empresa-email");
-            if (tel)  tel.innerText = data.telefono;
-            if (mail) mail.innerText = data.email;
-        })
-        .catch(console.error);
-
-    fetch("partials/footer.html")
-        .then(r => r.text())
-        .then(html => { document.getElementById("footer").innerHTML = html; })
-        .catch(console.error);
-    </script>
+    <script src="assets/js/simulador.js"></script>
+    <script src="assets/js/partials.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,44 @@
+# Configuración de Netlify — sitio estático servido desde la raíz del repo.
+# Netlify ya sirve URLs limpias (empresa.html se entrega en /empresa).
+# Estas reglas redirigen (301) las rutas antiguas con .html a su versión limpia,
+# para no tener contenido duplicado y conservar el SEO de enlaces ya indexados.
+# La query string (?id=...) se conserva automáticamente en la redirección.
+
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/empresa.html"
+  to = "/empresa"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/proyectos.html"
+  to = "/proyectos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/proyecto.html"
+  to = "/proyecto"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/simulador.html"
+  to = "/simulador"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contacto.html"
+  to = "/contacto"
+  status = 301
+  force = true

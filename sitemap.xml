@@ -2,70 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://elcondor.com.co/</loc>
+        <loc>https://somoselcondor.com/</loc>
         <lastmod>2026-05-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://elcondor.com.co/proyectos.html</loc>
+        <loc>https://somoselcondor.com/proyectos</loc>
         <lastmod>2026-05-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://elcondor.com.co/proyecto.html?id=esmeralda</loc>
+        <loc>https://somoselcondor.com/proyecto?id=esmeralda</loc>
         <lastmod>2026-05-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://elcondor.com.co/proyecto.html?id=esmeralda-luxury</loc>
+        <loc>https://somoselcondor.com/proyecto?id=esmeralda-luxury</loc>
         <lastmod>2026-05-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://elcondor.com.co/proyecto.html?id=topacio</loc>
+        <loc>https://somoselcondor.com/proyecto?id=topacio</loc>
         <lastmod>2026-05-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://elcondor.com.co/proyecto.html?id=topacio-luxury</loc>
+        <loc>https://somoselcondor.com/proyecto?id=topacio-luxury</loc>
         <lastmod>2026-05-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://elcondor.com.co/proyecto.html?id=puerta-de-oro</loc>
+        <loc>https://somoselcondor.com/proyecto?id=puerta-de-oro</loc>
         <lastmod>2026-05-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://elcondor.com.co/empresa.html</loc>
+        <loc>https://somoselcondor.com/empresa</loc>
         <lastmod>2026-05-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://elcondor.com.co/simulador.html</loc>
+        <loc>https://somoselcondor.com/simulador</loc>
         <lastmod>2026-05-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
     </url>
 
     <url>
-        <loc>https://elcondor.com.co/contacto.html</loc>
+        <loc>https://somoselcondor.com/contacto</loc>
         <lastmod>2026-05-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
