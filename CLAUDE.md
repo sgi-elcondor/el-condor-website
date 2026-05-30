@@ -34,4 +34,4 @@
 ## No hacer sin pedirlo
 - Reestructurar carpetas (rompe rutas cableadas en los HTML).
 - Borrar archivos sin confirmar que no se referencian en HTML/CSS/JS/JSON.
-- Hacer `commit`/`push` salvo que el usuario lo solicite.
+- Hacer `commit`/`push` salvo que el usuario lo solicite.  Muy importante, los commits sin co-autor.

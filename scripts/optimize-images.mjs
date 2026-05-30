@@ -45,3 +45,32 @@ for (const [file, width, quality] of TARGETS) {
 }
 
 console.log(`\nTotal: ${kb(before)} KB -> ${kb(after)} KB  (ahorro ${kb(before - after)} KB)`);
+
+// ---- Logos de marca + favicon (a partir de los originales Logo_Condor*) ----
+// Genera: logo-condor.webp (con fondo, para previews), logo-condor-sin-fondo.webp
+// (transparente, para header/footer/loader) y favicon-{32,180,192}.png (solo el cóndor).
+try {
+  await sharp(join(DIR, "Logo_Condor.jpg"))
+    .resize({ width: 1200 }).webp({ quality: 82 })
+    .toFile(join(DIR, "logo-condor.webp"));
+
+  const sinFondo = join(DIR, "Logo_Condor_sin_fondo.png");
+  await sharp(sinFondo)
+    .resize({ width: 600 }).webp({ quality: 90 })
+    .toFile(join(DIR, "logo-condor-sin-fondo.webp"));
+
+  // Favicon: recorta la zona superior (solo el ave) y la centra en un cuadrado transparente.
+  const meta = await sharp(sinFondo).metadata();
+  const crop = await sharp(sinFondo)
+    .extract({ left: 0, top: 0, width: meta.width, height: Math.round(meta.height * 0.57) })
+    .png().toBuffer();
+  const bird = await sharp(crop).trim().png().toBuffer();   // separar trim evita "bad extract area"
+  for (const sz of [32, 180, 192]) {
+    await sharp(bird)
+      .resize(sz, sz, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
+      .png().toFile(join(DIR, `favicon-${sz}.png`));
+  }
+  console.log("Logos y favicon generados.");
+} catch (e) {
+  console.error(`ERROR logos/favicon: ${e.message}`);
+}
