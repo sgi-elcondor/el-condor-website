@@ -4,6 +4,13 @@
   "private": true,
   "description": "Sitio web estático de El Cóndor S.A.S",
   "scripts": {
-    "dev": "npx --yes netlify-cli dev"
+    "dev": "npx --yes netlify-cli dev",
+    "optimize:img": "node scripts/optimize-images.mjs",
+    "minify:vendor": "node scripts/minify-vendor.mjs"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "sharp": "^0.34.5",
+    "terser": "^5.48.0"
   }
 }
