@@ -2,6 +2,7 @@
 .vscode/
 .idea/
 .claude/
+memory/
 
 # Sistema operativo
 Thumbs.db
