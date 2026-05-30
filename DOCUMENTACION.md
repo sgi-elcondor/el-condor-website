@@ -35,8 +35,8 @@ Website/
 │   │   ├── bootstrap.css        Bootstrap (grid + componentes)
 │   │   ├── aos/aos.css          Animaciones al hacer scroll (AOS)
 │   │   ├── swiper/swiper.css    Carruseles (Swiper)
-│   │   ├── loader/loaders.css   Animación de carga inicial
 │   │   └── font-awesome/font-awesome.css   Íconos
+│   │   (El estilo del loader inicial vive en style.css, no en un archivo aparte)
 │   │
 │   ├── js/
 │   │   ├── app.js               Lógica propia: detalle de proyecto + gráfica
@@ -55,6 +55,10 @@ Website/
 │   │   ├── empresa.json         Datos de contacto/empresa (teléfonos, redes…)
 │   │   └── proyectos.json       Catálogo de proyectos (fuente de verdad)
 │   └── pdf/                Tablas de valores descargables (1 por proyecto)
+│
+├── scripts/               Tooling de build (solo dev, no se despliega)
+│   ├── optimize-images.mjs  Convierte/redimensiona imágenes a WebP (sharp)
+│   └── minify-vendor.mjs     Minifica in-place las librerías de terceros
 │
 └── output/                Tour virtual 360° (export de Pano2VR — independiente)
     ├── index.html              Visor del tour
@@ -144,7 +148,7 @@ los filtros de `proyectos.html`.
 
 - **Locales** (`assets/js`, `assets/css`): jQuery, Bootstrap, AOS, Swiper, Font Awesome.
 - **Por CDN** (solo en `proyecto.html`): lightGallery 2.7.1 (galería a pantalla completa).
-- **Fuentes**: Google Fonts (Open Sans + Rajdhani).
+- **Fuentes**: Google Fonts (Montserrat — títulos ExtraBold 800, texto Regular).
 
 ### Tour virtual (`output/`)
 

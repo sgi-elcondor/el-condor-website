@@ -28,6 +28,7 @@
 
 html,
 body {
+    font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
     max-width: 100%;
 }
@@ -114,8 +115,20 @@ body {
 }
 
 .main-header .navbar-toggler {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     background-color: transparent;
     border-color: rgba(255, 255, 255, 0.35);
+}
+
+.toggler-label {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .main-header .navbar-toggler:focus {
@@ -136,8 +149,8 @@ body {
 }
 
 .brand-text {
-    font-family: "Rajdhani", sans-serif;
-    font-size: 1.1rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.95rem;
     font-weight: 700;
     color: #ffffff;
     text-transform: uppercase;
@@ -147,9 +160,10 @@ body {
 }
 
 .main-header .nav-link {
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 0.74rem;
+    font-weight: 600;
     padding: 4px 8px;
     line-height: 1;
     color: #fff;
@@ -172,7 +186,7 @@ body {
     gap: 5px;
     background: #C05C20;
     color: #fff !important;
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 0.82rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -199,7 +213,7 @@ body {
 ---------------------------------------------------------------- */
 
 .hero {
-    background: url("../images/hero-bg.jpg") no-repeat center;
+    background: url("../images/hero-bg.webp") no-repeat center;
     background-size: cover;
     overflow: hidden;
     position: relative;
@@ -216,7 +230,7 @@ body {
 .hero .texture {
     width: 100%;
     height: 100%;
-    background: url("../images/hero-texture.png") no-repeat center;
+    background: url("../images/hero-texture.webp") no-repeat center;
     background-size: cover;
     opacity: 0.4;
     position: absolute;
@@ -304,7 +318,7 @@ body {
     color: #ffffff;
     text-align: center;
     padding: 14px 16px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 0.95rem;
 }
 
@@ -323,8 +337,8 @@ body {
 }
 
 .hero-title {
-    font-family: "Rajdhani", sans-serif;
-    font-size: clamp(2.3rem, 6vw, 5rem);
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2.8rem);
     font-weight: 800;
     color: #ffffff;
     text-transform: uppercase;
@@ -337,8 +351,8 @@ body {
 
 
 .hero-title2 {
-    font-family: "Rajdhani", sans-serif;
-    font-size: clamp(3.6rem, 8.5vw, 8.5rem);
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(2.4rem, 6vw, 5.5rem);
     font-weight: 800;
     color: #ffffff;
     text-transform: uppercase;
@@ -350,7 +364,7 @@ body {
 }
 
 .hero-subtitle {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: clamp(1.05rem, 2.5vw, 1.35rem);
     font-weight: 700;
     color: #ffffff;
@@ -367,7 +381,7 @@ body {
     display: inline-block;
     background-color: #C05C20;
     color: #ffffff;
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.15rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -445,7 +459,7 @@ body {
 }
 
 .stat-number {
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 2.4rem;
     font-weight: 800;
     color: #C05C20;
@@ -453,7 +467,7 @@ body {
 }
 
 .stat-label {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 0.8rem;
     color: #cfcfcf;
     text-transform: uppercase;
@@ -502,7 +516,7 @@ body {
     background-color: #C05C20;
     border-color: #C05C20;
     color: #ffffff;
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     padding: 12px 28px;
@@ -526,7 +540,7 @@ body {
 .btn-outline-primary {
     border-color: #C05C20;
     color: #C05C20;
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     border-radius: 6px;
@@ -902,7 +916,7 @@ body {
 }
 
 .footer-heading {
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 0.78rem;
     text-transform: uppercase;
@@ -1041,7 +1055,7 @@ body {
 }
 
 .credencial-valor {
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 17px;
     font-weight: 800;
     color: #1B2342;
@@ -1242,7 +1256,7 @@ body {
 }
 
 .pf-group-label {
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 0.72rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -1347,7 +1361,7 @@ body {
 }
 
 .proy-card-body h5 {
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.25rem;
     font-weight: 800;
     color: #1B2342;
@@ -1429,7 +1443,7 @@ body {
 }
 
 .proyectos-cta-sup {
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 0.78rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -1558,7 +1572,7 @@ body {
 }
 
 .sim-label {
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 0.85rem;
     text-transform: uppercase;
@@ -1666,7 +1680,7 @@ body {
 
 .sim-resultado-header h5,
 .sim-resultado-header h3 {
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.15rem;
     font-weight: 700;
     color: #ffffff;
@@ -1697,7 +1711,7 @@ body {
 }
 
 .sim-item-value {
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
     color: #ffffff;
@@ -1773,7 +1787,7 @@ body {
 }
 
 .leads-info h2 {
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 800;
     color: #ffffff;
@@ -1819,7 +1833,7 @@ body {
 
 .leads-form-card h5,
 .leads-form-card h3 {
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.5rem;
     font-weight: 800;
     color: #1B2342;
@@ -1995,7 +2009,7 @@ body {
     display: inline-block;
     background: rgba(192, 92, 32, 0.18);
     color: #C05C20;
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 0.72rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -2058,7 +2072,7 @@ body {
 }
 
 .proy-stat-val {
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.1rem;
     font-weight: 800;
     color: #ffffff;
@@ -2150,7 +2164,7 @@ body {
 }
 
 .proy-caract-text {
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 0.92rem;
     font-weight: 700;
     color: #1B2342;
@@ -2197,7 +2211,7 @@ body {
 .ct-card-header h5 {
     color: #fff;
     margin: 0;
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.05rem;
     font-weight: 700;
     letter-spacing: 0.4px;
@@ -2209,7 +2223,7 @@ body {
 }
 
 .ct-info-label {
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 0.70rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -2247,7 +2261,7 @@ body {
     border: none;
     border-radius: 8px;
     padding: 11px 18px;
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 0.97rem;
     font-weight: 700;
     display: flex;
@@ -2266,7 +2280,7 @@ body {
 }
 
 .ct-form-label {
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 0.70rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -2339,7 +2353,7 @@ body {
 .cronograma-header h4 {
     color: #fff;
     margin: 0;
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.05rem;
     font-weight: 700;
     letter-spacing: 0.4px;
@@ -2369,7 +2383,7 @@ body {
     z-index: 2;
     background: #f7f8fb;
     color: #1B2342;
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 0.72rem;
     text-transform: uppercase;

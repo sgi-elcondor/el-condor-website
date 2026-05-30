@@ -20,12 +20,12 @@
     "areaCat": "compacto",
     "caracteristicas": ["Urbanización abierta", "Servicios básicos", "Sin intereses", "Financiación hasta 36 meses"],
     "imagenes": [
-      "assets/images/dron1.jpeg",
-      "assets/images/dron2.jpeg",
-      "assets/images/flandes1.png",
-      "assets/images/flandes2.png",
-      "assets/images/flandes3.png",
-      "assets/images/flandes4.png"
+      "assets/images/dron1.webp",
+      "assets/images/dron2.webp",
+      "assets/images/flandes1.webp",
+      "assets/images/flandes2.webp",
+      "assets/images/flandes3.webp",
+      "assets/images/flandes4.webp"
     ],
     "pdfPrecios": "assets/pdf/tabla-valores-urbanizacion-la-esmeralda.pdf"
   },
