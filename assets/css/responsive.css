@@ -1,5 +1,6 @@
 /* ================================================================
    EL CÓNDOR – RESPONSIVE
+   Breakpoints alineados con Bootstrap (md = 768px, sm = 576px).
 ================================================================ */
 
 /* ----------------------------------------------------------------
@@ -15,7 +16,7 @@
         margin-right: 12px;
     }
 
-    /* Nav link underline animation */
+    /* Subrayado animado del menú */
     .main-header .nav-link {
         position: relative;
     }
@@ -70,9 +71,9 @@
 }
 
 /* ----------------------------------------------------------------
-   Mobile — max 768px
+   Mobile — hasta 767.98px (navbar colapsado)
 ---------------------------------------------------------------- */
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
 
     /* ---- Header ---- */
     .main-header {
@@ -85,7 +86,6 @@
         display: none;
     }
 
-    /* Toggler icon visible on dark header */
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     }
@@ -139,30 +139,30 @@
         padding-bottom: 30px;
     }
 
-    .hero.hero-inner .container .mt-3 {
+    .hero-inner .mt-3 {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
     }
 
-    .hero.hero-inner .container .mt-3 .btn {
+    .hero-inner .mt-3 .btn {
         flex: 1 1 auto;
         text-align: center;
     }
 
-    /* ---- Stats bar (index) — stack vertically ---- */
+    /* ---- Stats bar (index) — apilado vertical ---- */
     .stats-bar .row {
         flex-direction: column;
         align-items: center;
     }
 
     .stats-bar .stat-item {
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
         border-right: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
         padding: 16px 0;
-        width: 100%;
     }
 
     .stats-bar .stat-item:last-child {
@@ -173,34 +173,31 @@
         font-size: 2rem;
     }
 
-    /* ---- Projects media list (index) ---- */
+    /* ---- Tarjetas de proyecto (index) — apilado vertical ---- */
     .proyectos .media {
         flex-direction: column;
         align-items: flex-start;
     }
 
     .proyectos .media img {
-        margin-right: 0 !important;
+        margin-right: 0 !important; /* vence a la utilidad .mr-4 de Bootstrap */
         margin-bottom: 14px;
         width: 80px;
         height: 80px;
     }
 
-    /* ---- Simulator ---- */
-    .sim-form-card {
-        padding: 24px 18px;
-    }
-
+    /* ---- Simulador ---- */
+    .sim-form-card,
     .sim-resultado {
         padding: 24px 18px;
     }
 
-    /* ---- Leads / Contact form ---- */
+    /* ---- Formulario de contacto / leads ---- */
     .leads-form-card {
         padding: 28px 22px;
     }
 
-    /* ---- Testimonial card — stack vertically ---- */
+    /* ---- Testimonios — apilado vertical ---- */
     .test-card {
         flex-direction: column;
         max-width: 100%;
@@ -233,7 +230,7 @@
         padding: 18px;
     }
 
-    /* ---- Floating WhatsApp ---- */
+    /* ---- WhatsApp flotante ---- */
     .whatsapp-float {
         width: 50px;
         height: 50px;
@@ -242,29 +239,23 @@
         right: 16px;
     }
 
-    /* ---- Featured ---- */
+    /* ---- Secciones ---- */
     .featured {
-        padding-bottom: 60px;
         padding-top: 40px;
+        padding-bottom: 60px;
     }
 
-    /* ---- Services ---- */
     .services {
         padding-top: 30px;
         margin-top: 0;
     }
 
-    .services .media img {
-        width: 70px;
-        height: 70px;
-    }
-
-    /* ---- Gallery ---- */
+    /* ---- Galería (proyecto) ---- */
     .proyecto-galeria img {
         height: 260px;
     }
 
-    /* ---- Proyectos page — filter bar ---- */
+    /* ---- Barra de filtros (proyectos) ---- */
     .pf-bar {
         flex-direction: column;
         align-items: flex-start;
@@ -275,7 +266,7 @@
         margin-left: 0;
     }
 
-    /* ---- Proyectos page — CTA card ---- */
+    /* ---- CTA (proyectos) ---- */
     .proyectos-cta {
         padding: 60px 0;
     }
@@ -285,7 +276,7 @@
         margin-top: 40px;
     }
 
-    /* ---- Empresa page ---- */
+    /* ---- Empresa ---- */
     .empresa-credenciales {
         padding: 50px 0;
     }
@@ -303,7 +294,7 @@
         margin-bottom: 0;
     }
 
-    /* ---- Proyecto detail — stats bar ---- */
+    /* ---- Stats bar (detalle de proyecto) ---- */
     .proy-stats-bar {
         padding: 16px 0;
     }
@@ -314,54 +305,55 @@
 }
 
 /* ----------------------------------------------------------------
-   Small mobile — max 576px
+   Small mobile — hasta 575.98px
 ---------------------------------------------------------------- */
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
 
     .hero {
         margin-top: 60px;
         padding-top: 40px;
     }
 
-    /* ---- Hero titles tighter ---- */
     .hero-title {
         font-size: 1.6rem;
     }
 
-    /* ---- Stats — enforce single-column over Bootstrap cols ---- */
-    .stats-bar .row > [class*="col-"] {
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
+    .hero-inner {
+        padding-top: 90px;
     }
 
-    /* ---- Simulator cards full padding ---- */
+    /* ---- Simulador ---- */
     .sim-form-card,
     .sim-resultado {
         padding: 20px 14px;
         border-radius: 14px;
     }
 
-    /* ---- Testimonial CTA ---- */
+    /* ---- Testimonios ---- */
     .testimonial-cta {
         padding: 30px 18px;
     }
 
-    /* ---- Leads form ---- */
+    /* ---- Leads ---- */
     .leads-form-card {
         padding: 20px 14px;
     }
 
-    /* ---- Gallery ---- */
+    .contacto-leads {
+        padding: 50px 0;
+    }
+
+    /* ---- Galería (proyecto) ---- */
     .proyecto-galeria img {
         height: 210px;
     }
 
-    /* ---- Filter chips ---- */
+    /* ---- Filtros (proyectos) ---- */
     .pf-chips {
         gap: 6px;
     }
 
-    /* ---- Proyecto detail — stats 2×2 ---- */
+    /* ---- Stats (detalle de proyecto) ---- */
     .proy-stat-val {
         font-size: 0.9rem;
     }
@@ -370,25 +362,15 @@
         font-size: 0.6rem;
     }
 
-    /* ---- Proyecto detail — hero ---- */
-    .hero-inner {
-        padding-top: 90px;
-    }
-
-    /* ---- Section title ---- */
+    /* ---- Títulos de sección ---- */
     .title h2 {
         font-size: 26px;
     }
 
-    /* ---- Empresa NIT badge ---- */
+    /* ---- Badge NIT (empresa) ---- */
     .empresa-nit-badge {
         flex-direction: column;
         text-align: center;
         gap: 8px;
-    }
-
-    /* ---- Leads info ---- */
-    .contacto-leads {
-        padding: 50px 0;
     }
 }
