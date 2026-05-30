@@ -577,7 +577,7 @@ body {
 }
 
 .services .media {
-    margin: 40px 0;
+    margin: 28px 0;
 }
 
 .services h5 {
@@ -593,8 +593,8 @@ body {
 ---------------------------------------------------------------- */
 
 .proyectos .media img {
-    width: 110px;
-    height: 110px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
     border-radius: 8px;
     flex-shrink: 0;
@@ -607,8 +607,8 @@ body {
 }
 
 .proyecto-card-title {
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 700;
     line-height: 1.2;
     color: #1B2342;
     margin-bottom: 4px;
@@ -616,12 +616,6 @@ body {
 
 .proyecto-card-meta {
     color: #444;
-    margin-bottom: 12px;
-}
-
-.proyecto-card-desc {
-    font-style: italic;
-    color: #555;
     margin-bottom: 12px;
 }
 

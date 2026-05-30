@@ -34,9 +34,10 @@
 
     function cardDestacado(p, i) {
         const tipo = tipoLabel[p.tipo] || p.tipo;
-        const linea1 = p.precioDesde
-            ? `<li><strong>Desde:</strong> ${p.precioTexto}</li>`
-            : `<li><strong>Tipo:</strong> ${tipo}</li>`;
+        const specs = [];
+        if (p.precioDesde) specs.push(`<li><strong>Desde</strong> ${p.precioTexto}</li>`);
+        if (p.area && p.area !== "Consultar") specs.push(`<li><strong>Área</strong> ${p.area}</li>`);
+        if (!specs.length) specs.push(`<li>Precios y áreas a consultar</li>`);
         return `
             <div class="col-sm-6 col-lg-4">
                 <div class="media" data-aos="fade-up" data-aos-delay="${(i % 3 + 1) * 100}" data-aos-duration="400">
@@ -44,10 +45,8 @@
                     <div class="media-body">
                         <h3 class="proyecto-card-title">${p.nombre}</h3>
                         <p class="proyecto-card-meta">${p.ciudad}, ${p.departamento} · ${tipo}</p>
-                        <p class="proyecto-card-desc">${p.descripcion}</p>
                         <ul class="list-unstyled small mt-2">
-                            ${linea1}
-                            <li><strong>Área:</strong> ${p.area}</li>
+                            ${specs.join("")}
                         </ul>
                         <div class="mt-2">
                             <a href="/proyecto?id=${p.slug}" class="btn btn-outline-primary btn-sm">Ver proyecto</a>
