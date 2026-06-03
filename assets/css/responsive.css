@@ -355,11 +355,6 @@
         border-radius: 14px;
     }
 
-    /* ---- Testimonios ---- */
-    .testimonial-cta {
-        padding: 30px 18px;
-    }
-
     /* ---- Leads ---- */
     .leads-form-card {
         padding: 20px 14px;
@@ -367,6 +362,17 @@
 
     .contacto-leads {
         padding: 50px 0;
+    }
+
+    /* ---- Mini-secciones (ubicación / legal) ---- */
+    .mini-band {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 18px;
+    }
+
+    .mini-link {
+        white-space: normal;
     }
 
     /* ---- Galería (proyecto) ---- */

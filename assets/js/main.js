@@ -30,6 +30,19 @@
             );
         }
 
+        // FAQ acordeón: al abrir una pregunta, cierra las demás
+        var faqItems = document.querySelectorAll(".faq-item");
+        if (faqItems.length) {
+            faqItems.forEach(function (item) {
+                item.addEventListener("toggle", function () {
+                    if (!item.open) return;
+                    faqItems.forEach(function (other) {
+                        if (other !== item) other.open = false;
+                    });
+                });
+            });
+        }
+
     });
 
     jQuery(window).on("load", function () {
