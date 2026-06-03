@@ -57,6 +57,60 @@
         }
     });
 
+    /* ── selector de proyecto y lote (solo simulador.html) ── */
+    var selProyectos = $("sim-proyectos");
+    if (selProyectos) {
+        var selLotesStep = $("sim-lotes-step");
+        var selLotes     = $("sim-lotes");
+
+        var marcarActivo = function (cont, btn) {
+            cont.querySelectorAll(".sim-activo-btn").forEach(function (b) {
+                b.classList.remove("sim-activo-btn");
+            });
+            btn.classList.add("sim-activo-btn");
+        };
+
+        var renderLotes = function (proy) {
+            selLotes.innerHTML = proy.lotes.map(function (l) {
+                return '<button type="button" class="sim-lote-btn" data-precio="' + l.precio + '">' +
+                       '<span class="sim-lote-medida">' + l.label + '</span>' +
+                       '<span class="sim-lote-precio">' + fmt(l.precio) + '</span></button>';
+            }).join("");
+            selLotesStep.style.display = "block";
+
+            selLotes.onclick = function (e) {
+                var btn = e.target.closest(".sim-lote-btn");
+                if (!btn) return;
+                marcarActivo(selLotes, btn);
+                precioInput.value = formatCOP(btn.dataset.precio);
+                precioInput.classList.remove("is-invalid");
+            };
+        };
+
+        fetch("assets/data/proyectos.json")
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+                var conLotes = data.filter(function (p) { return p.lotes && p.lotes.length; });
+                selProyectos.innerHTML = conLotes.map(function (p, i) {
+                    return '<button type="button" class="sim-proy-btn" data-idx="' + i + '">' +
+                           '<img src="' + p.logo + '" alt="' + p.nombre + '" loading="lazy">' +
+                           '<span>' + p.nombre + '</span></button>';
+                }).join("");
+
+                selProyectos.addEventListener("click", function (e) {
+                    var btn = e.target.closest(".sim-proy-btn");
+                    if (!btn) return;
+                    marcarActivo(selProyectos, btn);
+                    selLotes.innerHTML = "";
+                    renderLotes(conLotes[+btn.dataset.idx]);
+                });
+            })
+            .catch(function (err) {
+                console.error(err);
+                selProyectos.innerHTML = '<p class="text-muted mb-0">No se pudieron cargar los proyectos. Recarga la página.</p>';
+            });
+    }
+
     /* ── calcular ── */
     simBtn.addEventListener("click", function () {
         var precio  = parseCOP(precioInput.value);

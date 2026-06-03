@@ -535,7 +535,14 @@ body {
     border-color: #7a2f0d;
 }
 
-/* Halo de foco en color de marca (Bootstrap lo pone azul por defecto) */
+/* La plantilla base añade un overlay decorativo .btn::after que en hover
+   asoma un recuadro con esquinas distintas a las del botón. No se usa en el
+   rediseño: se desactiva en todos los botones. */
+.btn::after {
+    display: none !important;
+}
+
+/* Halo de foco en color de marca (Bootstrap lo pone rojo por defecto) */
 .btn:focus,
 .btn.focus,
 .btn-primary:focus,
@@ -1710,6 +1717,131 @@ body {
 .simulador-inline {
     padding: 80px 0;
     background: #f5f0e8;
+}
+
+/* ── selector de proyecto y lote ── */
+.sim-selector {
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.sim-selector-step + .sim-selector-step {
+    margin-top: 26px;
+}
+
+.sim-selector-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #1B2342;
+    margin-bottom: 14px;
+}
+
+.sim-step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #C05C20;
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+.sim-proy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 14px;
+}
+
+.sim-proy-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 14px 10px;
+    background: #fff;
+    border: 2px solid #e6ddcd;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.sim-proy-btn img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.sim-proy-btn span {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 0.78rem;
+    color: #1B2342;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.sim-proy-btn:hover {
+    border-color: #C05C20;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.sim-lote-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+}
+
+.sim-lote-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 80px;
+    padding: 12px;
+    background: #fff;
+    border: 2px solid #e6ddcd;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.sim-lote-medida {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #1B2342;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.sim-lote-precio {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #C05C20;
+}
+
+.sim-lote-btn:hover {
+    border-color: #C05C20;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.sim-activo-btn {
+    border-color: #C05C20;
+    background: #fff6ef;
+    box-shadow: 0 0 0 3px rgba(192, 92, 32, 0.15);
 }
 
 .sim-form-card {
