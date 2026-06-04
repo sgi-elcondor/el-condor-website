@@ -17,6 +17,8 @@
     var nSplitSelect  = $("sim-n-split");      // solo simulador.html
     var diaSelect     = $("sim-dia");          // solo simulador.html
     var cronoWrapper  = $("cronograma-wrapper"); // solo simulador.html
+    var inicialMenos  = $("sim-inicial-menos");  // solo simulador.html
+    var PORC_INICIAL  = 0.30;
 
     /* ── helpers ── */
     function formatCOP(val) {
@@ -57,6 +59,26 @@
         }
     });
 
+    /* ── cuota inicial sugerida = 30% (solo simulador.html) ── */
+    function aplicarInicialSugerida() {
+        var precio = parseCOP(precioInput.value);
+        inicialInput.value = precio > 0
+            ? formatCOP(String(Math.round(precio * PORC_INICIAL)))
+            : "";
+        inicialInput.classList.remove("is-invalid");
+    }
+
+    if (inicialMenos) {
+        precioInput.addEventListener("input", function () {
+            if (!inicialMenos.checked) aplicarInicialSugerida();
+        });
+        inicialMenos.addEventListener("change", function () {
+            inicialInput.readOnly = !this.checked;
+            if (this.checked) inicialInput.focus();
+            else aplicarInicialSugerida();
+        });
+    }
+
     /* ── selector de proyecto y lote (solo simulador.html) ── */
     var selProyectos = $("sim-proyectos");
     if (selProyectos) {
@@ -78,12 +100,15 @@
             }).join("");
             selLotesStep.style.display = "block";
 
+            if (proy.cuotasSugeridas) mesesInput.value = proy.cuotasSugeridas;
+
             selLotes.onclick = function (e) {
                 var btn = e.target.closest(".sim-lote-btn");
                 if (!btn) return;
                 marcarActivo(selLotes, btn);
                 precioInput.value = formatCOP(btn.dataset.precio);
                 precioInput.classList.remove("is-invalid");
+                if (inicialMenos && !inicialMenos.checked) aplicarInicialSugerida();
             };
         };
 

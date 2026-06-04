@@ -98,8 +98,13 @@
                                     <span class="input-group-text sim-prefix">$</span>
                                 </div>
                                 <input type="text" class="form-control sim-input" id="sim-inicial"
-                                    placeholder="Ej: 13.500.000" inputmode="numeric">
+                                    placeholder="Ej: 13.500.000" inputmode="numeric" readonly>
                             </div>
+                            <label class="sim-label sim-opt-tag mt-2 mb-0">
+                                <input type="checkbox" id="sim-inicial-menos">
+                                Quiero pagar menos del 30% inicial
+                            </label>
+                            <small class="sim-hint">Por defecto la inicial es el 30% del valor del lote.</small>
                         </div>
 
                         <!-- SPLIT CUOTA INICIAL -->

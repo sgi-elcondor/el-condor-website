@@ -202,14 +202,28 @@ document.addEventListener("DOMContentLoaded", () => {
                     ?.addEventListener("click", () => swiper.slideNext());
             }
 
-            // PDF de precios
-            const pdfIframe   = document.getElementById("pdf-precios");
-            const pdfConsultar = document.getElementById("precios-consultar");
-            if (proyecto.pdfPrecios) {
-                pdfIframe.src = proyecto.pdfPrecios;
-                pdfIframe.style.display = "block";
-            } else if (pdfConsultar) {
-                pdfConsultar.style.display = "block";
+            // Tabla de precios por tipología (desde lotes[])
+            const tablaEl = document.getElementById("precios-tabla");
+            const preciosConsultar = document.getElementById("precios-consultar");
+            if (tablaEl && proyecto.lotes && proyecto.lotes.length) {
+                const fmtPrecio = n => "$ " + Math.round(n).toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                const filas = proyecto.lotes.map(l =>
+                    `<tr><td>${l.label}</td><td class="precio-col">${l.desde ? "desde " : ""}${fmtPrecio(l.precio)}</td></tr>`
+                ).join("");
+                tablaEl.innerHTML =
+                    `<div class="precios-tabla-wrap">
+                        <table class="precios-tabla">
+                            <thead><tr><th>Tipología</th><th class="precio-col">Precio</th></tr></thead>
+                            <tbody>${filas}</tbody>
+                        </table>
+                    </div>
+                    <p class="precios-nota">
+                        Precios sujetos a disponibilidad. Financiación directa sin intereses.
+                        <a href="/simulador">Simula tu plan de pago &rarr;</a>
+                    </p>`;
+            } else if (preciosConsultar) {
+                preciosConsultar.style.display = "block";
             }
         })
         .catch(function(err) {
