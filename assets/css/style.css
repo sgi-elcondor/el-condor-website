@@ -2387,9 +2387,68 @@ body {
     box-shadow: 0 10px 36px rgba(0, 0, 0, 0.12);
 }
 
-/* Iframes embebidos (mapa, street view, PDF de precios) */
+/* Iframes embebidos (mapa, street view) */
 .proy-iframe {
     border: 0;
+}
+
+/* Tabla de precios por tipología */
+.precios-tabla-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.12);
+}
+
+.precios-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.precios-tabla thead th {
+    background: #1B2342;
+    color: #fff;
+    font-weight: 700;
+    text-align: left;
+    padding: 16px 22px;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+}
+
+.precios-tabla tbody td {
+    padding: 14px 22px;
+    border-top: 1px solid #ece7dd;
+    color: #1B2342;
+}
+
+.precios-tabla tbody tr:nth-child(even) td {
+    background: #faf7f1;
+}
+
+.precios-tabla tbody tr:hover td {
+    background: #f3ede1;
+}
+
+.precios-tabla .precio-col {
+    text-align: right;
+    font-weight: 700;
+    color: #C05C20;
+    white-space: nowrap;
+}
+
+.precios-nota {
+    text-align: center;
+    margin: 22px auto 0;
+    color: #6b6b6b;
+    font-size: 0.92rem;
+}
+
+.precios-nota a {
+    color: #C05C20;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 /* Street view */
