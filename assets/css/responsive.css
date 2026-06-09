@@ -25,7 +25,7 @@
         content: "";
         width: 0;
         height: 3px;
-        background-color: #C05C20;
+        background-color: #F94F00;
         position: absolute;
         left: 50%;
         bottom: 0;
@@ -82,10 +82,6 @@
         padding: 0 14px;
         background: #1B2342;          /* pastilla opaca: una sola pieza */
         overflow: hidden;            /* recorta el menú a las esquinas */
-    }
-
-    .brand-text {
-        display: none;
     }
 
     .main-header .navbar-toggler {
@@ -329,6 +325,31 @@
     .proy-stat {
         padding: 10px 8px;
     }
+
+    /* ---- Cronograma (simulador) — scroll horizontal en móvil ---- */
+    .cronograma-header {
+        flex-wrap: wrap;
+    }
+
+    .crono-meta {
+        margin-left: 0;
+    }
+
+    .cronograma-table {
+        min-width: 580px;          /* el contenedor hace scroll-x; columnas legibles */
+    }
+
+    /* ---- Tabla de precios por tipología — compacta ---- */
+    .precios-tabla thead th,
+    .precios-tabla tbody td {
+        padding: 12px 14px;
+        font-size: 0.88rem;
+    }
+
+    /* ---- Header — logo proporcionado al pill ---- */
+    .main-header .navbar-brand img {
+        max-height: 36px;
+    }
 }
 
 /* ----------------------------------------------------------------
@@ -404,5 +425,12 @@
         flex-direction: column;
         text-align: center;
         gap: 8px;
+    }
+
+    /* ---- Tabla de precios — aún más compacta en teléfonos pequeños ---- */
+    .precios-tabla thead th,
+    .precios-tabla tbody td {
+        padding: 10px 11px;
+        font-size: 0.82rem;
     }
 }
