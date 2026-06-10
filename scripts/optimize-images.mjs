@@ -2,7 +2,7 @@
 // Uso: node scripts/optimize-images.mjs   (requiere devDependency "sharp")
 // No toca logo.png ni los originales: solo genera los .webp.
 import sharp from "sharp";
-import { stat } from "node:fs/promises";
+import { stat, readdir } from "node:fs/promises";
 import { join, parse } from "node:path";
 
 const DIR = "assets/images";
@@ -73,4 +73,24 @@ try {
   console.log("Logos y favicon generados.");
 } catch (e) {
   console.error(`ERROR logos/favicon: ${e.message}`);
+}
+
+// ---- Fotos de asesores (assets/images/asesores) ----
+// Convierte cada PNG a WebP (400 px basta para el círculo de 130 px en retina).
+try {
+  const ASES = join(DIR, "asesores");
+  const pngs = (await readdir(ASES)).filter((f) => /\.png$/i.test(f));
+  let b = 0, a = 0;
+  for (const file of pngs) {
+    const src = join(ASES, file);
+    const out = join(ASES, parse(file).name + ".webp");
+    const o = (await stat(src)).size;
+    await sharp(src).resize({ width: 400, withoutEnlargement: true }).webp({ quality: 80 }).toFile(out);
+    const n = (await stat(out)).size;
+    b += o; a += n;
+    console.log(`asesores/${file.padEnd(22)} ${String(kb(o)).padStart(5)} KB -> ${String(kb(n)).padStart(4)} KB`);
+  }
+  console.log(`Asesores: ${kb(b)} KB -> ${kb(a)} KB  (ahorro ${kb(b - a)} KB)`);
+} catch (e) {
+  console.error(`ERROR asesores: ${e.message}`);
 }
