@@ -1092,6 +1092,21 @@ body {
     text-align: center;
 }
 
+/* Email: icono y correo en la misma fila, alineados */
+.footer-email {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-email i {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.footer-email a {
+    word-break: break-word;
+}
+
 .footer-indent {
     padding-left: 18px;
 }
@@ -1855,11 +1870,12 @@ body {
 }
 
 .sim-prefix {
-    background: #f5f0e8;
-    color: #555;
+    background: #fff;
+    color: #F94F00;
     border: 1.5px solid #e0e0e0;
     border-right: none;
     font-weight: 700;
+    padding-right: 4px;
     border-radius: 8px 0 0 8px !important;
 }
 
@@ -1881,12 +1897,13 @@ body {
 }
 
 .sim-suffix {
-    background: #f5f0e8;
-    color: #555;
+    background: #fff;
+    color: #888;
     border: 1.5px solid #e0e0e0;
     border-left: none;
     font-weight: 600;
     font-size: 0.9rem;
+    padding-left: 4px;
     border-radius: 0 8px 8px 0 !important;
 }
 
