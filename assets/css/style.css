@@ -140,18 +140,18 @@ body {
 }
 
 .main-header .navbar-brand img {
-    max-height: 42px;
+    max-height: 30px;
     width: auto;
     object-fit: contain;
 }
 
 .brand-text {
     font-family: "Montserrat", sans-serif;
-    font-size: 0.82rem;
-    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.74rem;
+    font-weight: 600;
     color: #fff;
-    letter-spacing: 0.4px;
-    line-height: 1.1;
+    line-height: 1;
     white-space: nowrap;
 }
 
