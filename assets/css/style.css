@@ -974,27 +974,19 @@ body {
 }
 
 .faq-answer {
-    padding: 0 24px 20px;
+    padding: 0 24px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.32s ease;
 }
 
-/* Apertura suave del contenido */
 .faq-item[open] .faq-answer {
-    animation: faqOpen 0.35s ease;
-}
-
-@keyframes faqOpen {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    height: auto;
 }
 
 .faq-answer p {
     margin: 0;
+    padding-bottom: 20px;
     color: #555;
     font-size: 0.95rem;
     line-height: 1.7;
@@ -1495,7 +1487,7 @@ body {
 }
 
 .proy-badge-luxury {
-    background: linear-gradient(90deg, #9a3d0e, #F94F00);
+    background: #F94F00;
 }
 
 /* Card body */

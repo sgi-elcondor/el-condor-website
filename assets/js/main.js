@@ -30,15 +30,45 @@
             );
         }
 
-        // FAQ acordeón: al abrir una pregunta, cierra las demás
+        // FAQ acordeón con apertura/cierre animados (un <details> no anima el cierre)
         var faqItems = document.querySelectorAll(".faq-item");
         if (faqItems.length) {
+            var animateFaq = function (item, answer, opening) {
+                if (!answer) return;
+                item.classList.add("faq-animating");
+                if (opening) item.open = true;
+                var full = answer.scrollHeight;
+                answer.style.height = (opening ? 0 : full) + "px";
+                requestAnimationFrame(function () {
+                    answer.style.height = (opening ? full : 0) + "px";
+                });
+                answer.addEventListener("transitionend", function done(e) {
+                    if (e.propertyName !== "height") return;
+                    if (!opening) item.open = false;
+                    answer.style.height = "";
+                    item.classList.remove("faq-animating");
+                    answer.removeEventListener("transitionend", done);
+                });
+            };
+
             faqItems.forEach(function (item) {
-                item.addEventListener("toggle", function () {
-                    if (!item.open) return;
-                    faqItems.forEach(function (other) {
-                        if (other !== item) other.open = false;
-                    });
+                var summary = item.querySelector("summary");
+                var answer  = item.querySelector(".faq-answer");
+                if (!summary || !answer) return;
+
+                summary.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    if (item.classList.contains("faq-animating")) return;
+                    if (item.open) {
+                        animateFaq(item, answer, false);
+                    } else {
+                        faqItems.forEach(function (other) {
+                            if (other !== item && other.open && !other.classList.contains("faq-animating")) {
+                                animateFaq(other, other.querySelector(".faq-answer"), false);
+                            }
+                        });
+                        animateFaq(item, answer, true);
+                    }
                 });
             });
         }
