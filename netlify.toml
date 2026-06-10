@@ -7,27 +7,30 @@
 [build]
   publish = "."
 
-# Caché de assets: imágenes y fuentes rara vez cambian (si cambian, cambia el
-# nombre) → 1 año inmutable. CSS/JS → 1 semana (refresca tras un deploy).
+# Caché de assets. IMPORTANTE: los nombres de archivo NO llevan hash de versión,
+# así que un asset reemplazado conserva su nombre. Por eso CSS/JS se revalidan
+# siempre (ETag → 304 barato) y las imágenes caducan en 1 día, en vez de quedar
+# "congeladas". Las fuentes (Font Awesome) sí son inmutables: nunca cambian.
+# Para forzar refresco inmediato tras un cambio, versiona la URL (style.css?v=N).
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
 [[headers]]
   for = "/assets/images/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=86400"
 
 [[headers]]
   for = "/assets/fonts/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/assets/css/*"
-  [headers.values]
-    Cache-Control = "public, max-age=604800"
-
-[[headers]]
-  for = "/assets/js/*"
-  [headers.values]
-    Cache-Control = "public, max-age=604800"
 
 [[redirects]]
   from = "/index.html"
