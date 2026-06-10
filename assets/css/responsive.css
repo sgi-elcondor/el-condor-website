@@ -349,7 +349,11 @@
 
     /* ---- Header — logo proporcionado al pill ---- */
     .main-header .navbar-brand img {
-        max-height: 36px;
+        max-height: 34px;
+    }
+
+    .brand-text {
+        font-size: 0.76rem;
     }
 }
 
