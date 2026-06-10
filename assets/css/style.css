@@ -136,12 +136,23 @@ body {
 .main-header .navbar-brand {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .main-header .navbar-brand img {
     max-height: 42px;
     width: auto;
     object-fit: contain;
+}
+
+.brand-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.4px;
+    line-height: 1.1;
+    white-space: nowrap;
 }
 
 .main-header .nav-link {
