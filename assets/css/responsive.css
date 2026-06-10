@@ -80,7 +80,7 @@
         width: calc(100% - 20px);
         border-radius: 26px;
         padding: 0 14px;
-        background: #1B2342;          /* pastilla opaca: una sola pieza */
+        background: #111111;          /* pastilla opaca: una sola pieza */
         overflow: hidden;            /* recorta el menú a las esquinas */
     }
 
