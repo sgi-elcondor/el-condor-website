@@ -2654,6 +2654,107 @@ body {
     background: #fff;
 }
 
+/* Asesores (contacto.html) */
+.asesores-section {
+    background: linear-gradient(180deg, #f7f8fb 0%, #eef1f7 100%);
+    padding: 80px 0;
+}
+
+.asesor-card {
+    position: relative;
+    background: #fff;
+    border: 1px solid #e8eaf2;
+    border-radius: 16px;
+    padding: 28px 16px 22px;
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(27, 35, 66, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.asesor-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #1B2342, #F94F00);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+}
+
+.asesor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 34px rgba(27, 35, 66, 0.16);
+}
+
+.asesor-card:hover::before {
+    transform: scaleX(1);
+}
+
+.asesor-foto {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, #1B2342 0%, #F94F00 100%);
+    transition: transform 0.3s ease;
+}
+
+.asesor-card:hover .asesor-foto {
+    transform: scale(1.06);
+}
+
+.asesor-foto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    background: #f0f2f8;
+}
+
+/* Ajuste fino: fotos donde el sujeto queda demasiado abajo */
+.asesor-foto img.asesor-img-subir {
+    object-position: center 35%;
+}
+
+.asesor-nombre {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1B2342;
+    margin: 0 0 12px;
+}
+
+.asesor-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #25D366;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 30px;
+    padding: 9px 16px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.asesor-wa:hover {
+    background: #1ebe5d;
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+}
+
 
 /* ----------------------------------------------------------------
    21. SIMULADOR — CRONOGRAMA (simulador.html)

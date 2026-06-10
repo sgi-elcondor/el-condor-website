@@ -73,6 +73,44 @@
             });
         }
 
+        // Contador animado de métricas (index.html)
+        var statNumbers = document.querySelectorAll(".stat-number[data-count]");
+        if (statNumbers.length) {
+            var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            var animateCount = function (el) {
+                var target = parseInt(el.getAttribute("data-count"), 10) || 0;
+                var prefix = el.getAttribute("data-prefix") || "";
+                if (reduceMotion) { el.textContent = prefix + target; return; }
+                var duration = 1600, start = null;
+                var step = function (ts) {
+                    if (!start) start = ts;
+                    var p = Math.min((ts - start) / duration, 1);
+                    var eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+                    el.textContent = prefix + Math.round(eased * target);
+                    if (p < 1) requestAnimationFrame(step);
+                };
+                requestAnimationFrame(step);
+            };
+
+            if ("IntersectionObserver" in window) {
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            animateCount(entry.target);
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.4 });
+                statNumbers.forEach(function (el) {
+                    el.textContent = (el.getAttribute("data-prefix") || "") + "0";
+                    obs.observe(el);
+                });
+            } else {
+                statNumbers.forEach(animateCount);
+            }
+        }
+
     });
 
     jQuery(window).on("load", function () {
