@@ -156,20 +156,25 @@
                 <p class="eyebrow">Galería</p>
                 <h2 class="title-blue">Imágenes del proyecto</h2>
             </div>
-            <div class="swiper-container proyecto-galeria">
-                <div class="swiper-wrapper" id="galeria-proyecto"></div>
-                <div class="galeria-overlay">
-                    <button class="galeria-btn galeria-prev-btn">
-                        <i class="fa fa-chevron-left"></i>
-                    </button>
-                    <button class="galeria-btn galeria-next-btn">
-                        <i class="fa fa-chevron-right"></i>
-                    </button>
-                    <button class="galeria-btn galeria-fullscreen-btn">
-                        <i class="fa fa-expand"></i>
-                    </button>
+            <div class="proyecto-galeria">
+                <div class="swiper-container galeria-principal">
+                    <div class="swiper-wrapper" id="galeria-proyecto"></div>
+                    <div class="galeria-overlay">
+                        <button class="galeria-btn galeria-prev-btn" aria-label="Imagen anterior">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                        <button class="galeria-btn galeria-next-btn" aria-label="Imagen siguiente">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
+                        <button class="galeria-btn galeria-fullscreen-btn" aria-label="Ver en pantalla completa">
+                            <i class="fa fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="galeria-contador"><span id="galeria-actual">1</span> / <span id="galeria-total">1</span></div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-container galeria-thumbs">
+                    <div class="swiper-wrapper" id="galeria-thumbs"></div>
+                </div>
             </div>
         </div>
     </section>
