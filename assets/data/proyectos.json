@@ -33,12 +33,14 @@
       { "label": "Bodega · 255 m²", "precio": 127555000 }
     ],
     "imagenes": [
-      "assets/images/dron1.webp",
-      "assets/images/dron2.webp",
-      "assets/images/flandes1.webp",
-      "assets/images/flandes2.webp",
-      "assets/images/flandes3.webp",
-      "assets/images/flandes4.webp"
+      "assets/images/esmeralda-mapa.webp",
+      "assets/images/esmeralda-parque-1.webp",
+      "assets/images/esmeralda-parque-2.webp",
+      "assets/images/esmeralda-parque-3.webp",
+      "assets/images/esmeralda-parque-4.webp",
+      "assets/images/esmeralda-casa-tipo-1.webp",
+      "assets/images/esmeralda-casa-tipo-2.webp",
+      "assets/images/esmeralda-porteria.webp"
     ]
   },
 
@@ -70,7 +72,17 @@
       { "label": "Comercial · 182 m²", "precio": 91160000 }
     ],
     "imagenes": [
-      "assets/images/boton-esmeralda-luxury.jpg.jpeg"
+      "assets/images/esmeralda-luxury-fachada-frontal.webp",
+      "assets/images/esmeralda-luxury-fachada-esquinera.webp",
+      "assets/images/esmeralda-luxury-sala-comedor.webp",
+      "assets/images/esmeralda-luxury-cocina.webp",
+      "assets/images/esmeralda-luxury-cocina-perspectiva.webp",
+      "assets/images/esmeralda-luxury-alcoba-principal.webp",
+      "assets/images/esmeralda-luxury-alcoba.webp",
+      "assets/images/esmeralda-luxury-bano.webp",
+      "assets/images/esmeralda-luxury-tina.webp",
+      "assets/images/esmeralda-luxury-planta.webp",
+      "assets/images/esmeralda-luxury-planta-1.webp"
     ]
   },
 
@@ -103,7 +115,7 @@
       { "label": "Comercial · 91–188 m²", "precio": 45080000, "desde": true }
     ],
     "imagenes": [
-      "assets/images/boton-esmeralda-topacio.jpg.jpeg"
+      "assets/images/topacio-interior.webp"
     ]
   },
 
@@ -137,7 +149,7 @@
       { "label": "Esquinero · 120–124 m²", "precio": 57000000, "desde": true }
     ],
     "imagenes": [
-      "assets/images/boton-esmeralda-topacio-luxury.jpg.jpeg"
+      "assets/images/topacio-interior.webp"
     ]
   },
 
@@ -168,9 +180,7 @@
       { "label": "Campestre · 700 m²", "precio": 170000000, "desde": true },
       { "label": "Esquinero · 700 m²", "precio": 175000000, "desde": true }
     ],
-    "imagenes": [
-      "assets/images/boton-puerta-de-oro.jpg.jpeg"
-    ]
+    "imagenes": []
   },
 
   {
@@ -198,8 +208,6 @@
       { "label": "Lote · 75 m²", "precio": 80000000 },
       { "label": "Casa (lote + vivienda)", "precio": 210000000 }
     ],
-    "imagenes": [
-      "assets/images/boton-terrazas.jpg.jpeg"
-    ]
+    "imagenes": []
   }
 ]

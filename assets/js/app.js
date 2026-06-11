@@ -174,32 +174,73 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             // Gallery
+            const galeriaSection = document.getElementById("galeria");
             const galeriaEl = document.getElementById("galeria-proyecto");
             if (galeriaEl && proyecto.imagenes?.length) {
-                proyecto.imagenes.forEach(img => {
+                const imgs = proyecto.imagenes;
+                const unaSola = imgs.length === 1;
+                const thumbsEl = document.getElementById("galeria-thumbs");
+
+                imgs.forEach(img => {
                     const slide = document.createElement("div");
                     slide.className = "swiper-slide";
-                    slide.innerHTML = `<a href="${img}"><img src="${img}" alt="${proyecto.nombre}"></a>`;
+                    slide.innerHTML = `<a href="${img}"><img src="${img}" alt="${proyecto.nombre}" loading="lazy"></a>`;
                     galeriaEl.appendChild(slide);
+
+                    if (thumbsEl && !unaSola) {
+                        const t = document.createElement("div");
+                        t.className = "swiper-slide";
+                        t.innerHTML = `<img src="${img}" alt="" loading="lazy">`;
+                        thumbsEl.appendChild(t);
+                    }
                 });
 
-                const swiper = new Swiper(".proyecto-galeria", {
-                    loop: true,
-                    spaceBetween: 30,
-                    centeredSlides: true,
-                    pagination: { el: ".swiper-pagination", clickable: true }
+                // Una sola imagen: oculta flechas, miniaturas y contador (vía CSS)
+                if (unaSola) document.querySelector(".proyecto-galeria")?.classList.add("galeria-single");
+
+                const totalEl = document.getElementById("galeria-total");
+                if (totalEl) totalEl.textContent = imgs.length;
+
+                const thumbsSwiper = (!unaSola && thumbsEl)
+                    ? new Swiper(".galeria-thumbs", {
+                        slidesPerView: "auto",
+                        spaceBetween: 12,
+                        freeMode: true,
+                        watchSlidesVisibility: true,
+                        watchSlidesProgress: true
+                    })
+                    : null;
+
+                const swiper = new Swiper(".galeria-principal", {
+                    effect: "fade",
+                    fadeEffect: { crossFade: true },
+                    speed: 700,
+                    allowTouchMove: !unaSola,
+                    keyboard: { enabled: true },
+                    autoplay: unaSola ? false : { delay: 5000, disableOnInteraction: false },
+                    thumbs: thumbsSwiper ? { swiper: thumbsSwiper } : undefined,
+                    on: {
+                        slideChange() {
+                            const cur = document.getElementById("galeria-actual");
+                            if (cur) cur.textContent = this.activeIndex + 1;
+                        }
+                    }
                 });
 
                 if (typeof window.lightGallery === "function") {
                     const lg = window.lightGallery(galeriaEl, { selector: "a", download: false });
                     document.querySelector(".galeria-fullscreen-btn")
-                        ?.addEventListener("click", () => lg.openGallery(swiper.realIndex));
+                        ?.addEventListener("click", () => lg.openGallery(swiper.activeIndex));
                 }
 
-                document.querySelector(".galeria-prev-btn")
-                    ?.addEventListener("click", () => swiper.slidePrev());
-                document.querySelector(".galeria-next-btn")
-                    ?.addEventListener("click", () => swiper.slideNext());
+                if (!unaSola) {
+                    document.querySelector(".galeria-prev-btn")
+                        ?.addEventListener("click", () => swiper.isBeginning ? swiper.slideTo(imgs.length - 1) : swiper.slidePrev());
+                    document.querySelector(".galeria-next-btn")
+                        ?.addEventListener("click", () => swiper.isEnd ? swiper.slideTo(0) : swiper.slideNext());
+                }
+            } else if (galeriaSection) {
+                galeriaSection.style.display = "none";
             }
 
             // Tabla de precios por tipología (desde lotes[])

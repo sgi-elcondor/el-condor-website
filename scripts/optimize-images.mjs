@@ -94,3 +94,53 @@ try {
 } catch (e) {
   console.error(`ERROR asesores: ${e.message}`);
 }
+
+// ---- Renders de proyectos (assets/images/Render_Mapas, carpeta cruda no versionada) ----
+// Convierte los renders/planos a WebP con nombres kebab-case en assets/images/.
+// Se excluyen los panoramas 360º (no sirven como foto plana de galería).
+// { origen relativo a assets/images, nombre de salida (sin extensión) }
+const RENDERS = [
+  // La Esmeralda
+  ["Render_Mapas/mapaesmeralda.jpeg",                              "esmeralda-mapa"],
+  ["Render_Mapas/renders esmeralda/renders/05 RENDER PARQUE.jpg",  "esmeralda-parque-1"],
+  ["Render_Mapas/renders esmeralda/renders/08 RENDER PARQUE.jpg",  "esmeralda-parque-2"],
+  ["Render_Mapas/renders esmeralda/renders/13 RENDER PARQUE.jpg",  "esmeralda-parque-3"],
+  ["Render_Mapas/renders esmeralda/renders/16  RENDER PARQUE.jpg", "esmeralda-parque-4"],
+  ["Render_Mapas/renders esmeralda/renders/06 RENDER CASA TIPO I.jpg",  "esmeralda-casa-tipo-1"],
+  ["Render_Mapas/renders esmeralda/renders/7 RENDER CASA TIPO II.jpg",  "esmeralda-casa-tipo-2"],
+  ["Render_Mapas/renders esmeralda/renders/11  RENDER PORTERIA.jpg",    "esmeralda-porteria"],
+  // La Esmeralda Luxury
+  ["Render_Mapas/PLANTA LUXURY F.png",                             "esmeralda-luxury-planta"],
+  ["Render_Mapas/renders esmeralda luxury/ENTREGABLE/RENDERS FACHADAS (2)/FACHADA FRONTAL 1.png",   "esmeralda-luxury-fachada-frontal"],
+  ["Render_Mapas/renders esmeralda luxury/ENTREGABLE/RENDERS FACHADAS (2)/FACHADA ESQUINERA 1.png", "esmeralda-luxury-fachada-esquinera"],
+  ["Render_Mapas/renders esmeralda luxury/ENTREGABLE/RENDERS INTERIORES (6)/SALA-COMEDOR Nº1.png",       "esmeralda-luxury-sala-comedor"],
+  ["Render_Mapas/renders esmeralda luxury/ENTREGABLE/RENDERS INTERIORES (6)/COCINA Nº5.png",            "esmeralda-luxury-cocina"],
+  ["Render_Mapas/renders esmeralda luxury/ENTREGABLE/RENDERS INTERIORES (6)/RENDER COCINA PERSPECTIVA.png", "esmeralda-luxury-cocina-perspectiva"],
+  ["Render_Mapas/renders esmeralda luxury/ENTREGABLE/RENDERS INTERIORES (6)/RENDER ALCOBA PRINCIPAL 1.png", "esmeralda-luxury-alcoba-principal"],
+  ["Render_Mapas/renders esmeralda luxury/ENTREGABLE/RENDERS INTERIORES (6)/ALCOBA Nº3.png",            "esmeralda-luxury-alcoba"],
+  ["Render_Mapas/renders esmeralda luxury/ENTREGABLE/RENDERS INTERIORES (6)/BAÑO Nº2.png",              "esmeralda-luxury-bano"],
+  ["Render_Mapas/renders esmeralda luxury/ENTREGABLE/RENDERS INTERIORES (6)/RENDER TINA 1.png",         "esmeralda-luxury-tina"],
+  ["Render_Mapas/renders esmeralda luxury/ENTREGABLE/RENDERS PLANTAS (2)/RENDER PLANTA 1er PISO 1.png", "esmeralda-luxury-planta-1"],
+  // Topacio
+  ["Render_Mapas/cuadro interior TOPACIO-01.jpg.jpeg",             "topacio-interior"],
+];
+
+try {
+  let b = 0, a = 0;
+  for (const [file, name] of RENDERS) {
+    const src = join(DIR, file);
+    const out = join(DIR, name + ".webp");
+    try {
+      const o = (await stat(src)).size;
+      await sharp(src).resize({ width: 1600, withoutEnlargement: true }).webp({ quality: 80 }).toFile(out);
+      const n = (await stat(out)).size;
+      b += o; a += n;
+      console.log(`${name.padEnd(34)} ${String(kb(o)).padStart(6)} KB -> ${String(kb(n)).padStart(4)} KB`);
+    } catch (e) {
+      console.error(`ERROR ${name}: ${e.message}`);
+    }
+  }
+  console.log(`Renders: ${kb(b)} KB -> ${kb(a)} KB  (ahorro ${kb(b - a)} KB)`);
+} catch (e) {
+  console.error(`ERROR renders: ${e.message}`);
+}
