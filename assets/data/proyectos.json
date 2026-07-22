@@ -154,36 +154,6 @@
   },
 
   {
-    "id": 5,
-    "slug": "puerta-de-oro",
-    "nombre": "Puerta de Oro",
-    "ciudad": "Flandes",
-    "departamento": "Tolima",
-    "tipo": "condominio",
-    "logo": "assets/images/boton-puerta-de-oro.jpg.jpeg",
-    "descripcion": "Espacio para respirar y crecer. Amplios lotes campestres con servicios completos, rodeados de naturaleza y a pocos minutos del Río Magdalena. La vida tranquila que buscabas, cerca de todo.",
-    "ubicacion": "Flandes, Tolima",
-    "ubicacionTexto": "Ubicado en las afueras de Flandes, Tolima, en un entorno campestre con naturaleza, tranquilidad y alta valorización a largo plazo.",
-    "mapa": "https://www.google.com/maps?q=4.246944,-74.8407516&z=17&hl=es&output=embed",
-    "lat": 4.246944,
-    "lng": -74.8407516,
-    "precioDesde": 120000000,
-    "precioTexto": "$120.000.000",
-    "area": "Desde 500 m²",
-    "precioCat": "premium",
-    "areaCat": "grande",
-    "caracteristicas": ["Condominio campestre", "Agua y energía", "Alcantarillado", "Lotes grandes"],
-    "cuotasSugeridas": 24,
-    "lotes": [
-      { "label": "Campestre · 500 m²", "precio": 120000000, "desde": true },
-      { "label": "Esquinero · 500 m²", "precio": 125000000, "desde": true },
-      { "label": "Campestre · 700 m²", "precio": 170000000, "desde": true },
-      { "label": "Esquinero · 700 m²", "precio": 175000000, "desde": true }
-    ],
-    "imagenes": []
-  },
-
-  {
     "id": 8,
     "slug": "terrazas-de-alejandria-ii",
     "nombre": "Terrazas de Alejandría II Etapa",
